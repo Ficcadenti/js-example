@@ -1,4 +1,4 @@
-# php-example
+# js-example
 <h2><strong> Repository per Lezioni/esempi Java Script </strong></h2>
 <br>
 (c) 09/2016 - Raffaele Ficcadenti (raffaele.ficcadenti@gmail.com) <br>
