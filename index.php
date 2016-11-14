@@ -7,7 +7,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 
 <html>
 	<head>
-		<title>Corso PHP</title>
+		<title>Corso JavaScript</title>
+		<link rel="icon" href="./assets/media/favicon.png">
 		<style>
 			@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 			.disabled {
