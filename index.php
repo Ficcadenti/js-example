@@ -39,7 +39,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 			Per gli esempi che utilizzano chiamate a MySQL dovrete installare il database di esempio con le relative tabelle,<br>
 			ovviamente deve essere presente un'installazione di MySQL, e dovete conoscere la password di root.<br><br>
 			Lanciare da riga di comando:<br><br>
-				mysql -u <strong>root</strong> -p{<strong>password</strong>} -h {<strong>nomehost</strong>} < <strong>php-example.sql</strong><br><br>
+				mysql -u <strong>root</strong> -p{<strong>password</strong>} -h {<strong>nomehost</strong>} < <strong>js-example.sql</strong><br><br>
 			Lo script <strong>js-example.sql</strong> lo trovate versionato sotto la directory dumpdb.
 		</p>
 		<ul>
