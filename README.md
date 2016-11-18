@@ -19,8 +19,20 @@ Raffaele.
 	<li><strong>LEZIONE N. 0</strong> - Per iniziare.
 		<ul>
 			<br>
-			<li><b>esempio_01.html</b>: Esempio.</li>
+			<li><b>esempio_01.html</b>: Introduzione.</li>
+			<br>
+			<li><b>esempio_02.html</b>: L'oggetto String.</li>
+			<br>
+			<li><b>esempio_03.html</b>: Operatori.</li>
 			<br>
 		</ul>
 	</li>
+	<li><strong>LEZIONE N. 1</strong> - Struttura di un programma.
+		<ul>
+			<br>
+			<li><b>esempio_04.html</b>: Esempio.</li>
+			<br>
+		</ul>
+	</li>
+
 </ul>
