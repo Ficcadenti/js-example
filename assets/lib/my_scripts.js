@@ -12,7 +12,13 @@ function capitolo(str) /* utilizzo di variabili statiche */
 function paragrafo(str) /* utilizzo di variabili statiche */
 {
 	num_paragrafo++;
-	println("<h2 id=\"m30\">"+num_capitolo+"."+num_paragrafo+". "+str+"</h2>");
+	println("<h2 class=\"m30\">"+num_capitolo+"."+num_paragrafo+". "+str+"</h2>");
+	document.write("<div id=\""+str+"\" class=\"m70\">\n");
+}
+
+function chiudiparagrafo()
+{
+	println("</div>")
 }
 
 function replaceAll(str, find, replace) 

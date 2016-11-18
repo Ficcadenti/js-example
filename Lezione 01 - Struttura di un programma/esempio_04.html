@@ -38,6 +38,57 @@
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript">
 		capitolo("Struttura di un programma");
+		paragrafo("Variabili");
+
+		var var1=5*5;
+		var var2=var1+var1;
+		var var3;
+
+		println("var1="+var1);
+		println("var2="+var2);
+		println("var3="+var3);
+
+		var massimo=Math.max(2,4);
+		console.log("Il massimo tra 2 e 4 \xE9: "+massimo);
+		chiudiparagrafo();
+
+		capitolo("Esercizi");
+		paragrafo("Fizz Buzz");
+		for(var i=1; i<=100; i++)
+		{
+			if((i%3==0)&&(i%5==0))
+			{
+				println("FizzBuzz");
+			}
+			else if(i%3==0)
+			{
+				println("Fizz");
+			}
+			else if(i%5==0)
+			{
+				println("Buzz");
+			}
+			else
+			{
+				println(i);
+			}
+		}
+		chiudiparagrafo();
+
+		paragrafo("Scacchiera");
+		var size=16;
+		var str="";
+		for(var r=0; r<size; r++)
+		{
+			for(var c=0; c<size; c++)
+			{
+				//console.log((c+r)+":"+(c+r)%2);
+				(c+r)%2==0 ? str=str+"0":str=str+"1";
+			}	
+			println("["+str+"]");
+			str="";		
+		}
+		chiudiparagrafo();		
 	</script>
 
 	<hr>
