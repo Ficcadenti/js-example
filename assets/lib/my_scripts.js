@@ -37,7 +37,7 @@ function substrCount (str, subString)
 	return (str.length - (replaceAll(str,subString, "")).length) / subString.length;
 }
 
-function println(str)
+function println(str="")
 {
 	document.write(str+"<br>\n");
 }

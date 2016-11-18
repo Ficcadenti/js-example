@@ -56,7 +56,15 @@ http://www.w3.org/TR/html4/frameset.dtd>
 			<li><strong>LEZIONE N. 1</strong> - Struttura di un programma.
 				<ul>
 					<br>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione 01 - Struttura di un programma/esempio_04.html" target="_blank">esempio_04.html</a></b>: Esempio.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-01 - Struttura di un programma/esempio_04.html" target="_blank">esempio_04.html</a></b>: Esempio.</li>
+					<br>
+				</ul>
+			</li>
+
+			<li><strong>LEZIONE N. 2</strong> - Funzioni.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-02 - Funzioni/esempio_05.html" target="_blank">esempio_05.html</a></b>: Esempio.</li>
 					<br>
 				</ul>
 			</li>
