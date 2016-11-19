@@ -41,5 +41,12 @@ Raffaele.
 			<br>
 		</ul>
 	</li>
+	<li><strong>LEZIONE N. 3</strong> - Strutture Dati (Oggetti e Array).
+		<ul>
+			<br>
+			<li><b>esempio_06.html</b>: Oggetti.</li>
+			<br>
+		</ul>
+	</li>
 
 </ul>
