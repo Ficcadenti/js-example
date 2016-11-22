@@ -41,3 +41,13 @@ function println(str="")
 {
 	document.write(str+"<br>\n");
 }
+
+function infoBrowser()
+{
+	println('Browser           : '+navigator.appName);
+	println('Browser Code Name : '+navigator.appCodeName);
+	println('Cookie enabled    : '+navigator.cookieEnabled);
+	println('Versione          : '+navigator.appVersion);
+	println('Piattaforma       : '+navigator.platform);
+	println('User Agent        : '+navigator.userAgent);
+}
