@@ -45,6 +45,7 @@ Raffaele.
 		<ul>
 			<br>
 			<li><b>esempio_06.html</b>: Oggetti.</li>
+			<li><b>esempio_07.html</b>: Correlazioni.</li>
 			<br>
 		</ul>
 	</li>
