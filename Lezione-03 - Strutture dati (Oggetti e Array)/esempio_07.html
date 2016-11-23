@@ -91,7 +91,17 @@
 		function gatherCorrelations(journal) 
 		{
 			var phis = {};
-			for (var entry = 0; entry < journal.length; entry++) 
+			journal.forEach( function(entry) 
+			{
+				entry.events.forEach( function(elementoCorrente) 
+				{
+					if (!(elementoCorrente in phis))
+					{
+						phis[elementoCorrente] = phi(tableFor(elementoCorrente, journal));
+					}
+				});
+			});
+			/*for (var entry = 0; entry < journal.length; entry++) 
 			{
 				var events = journal[entry].events;
 				for (var i = 0; i < events.length; i++) 
@@ -102,7 +112,7 @@
 						phis[event] = phi(tableFor(event, journal));
 					}
 				}
-			}
+			}*/
 			return phis;
 		}
 

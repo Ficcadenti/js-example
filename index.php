@@ -81,6 +81,15 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<br>
 				</ul>
 			</li>
+
+			<li><strong>LEZIONE N. 4</strong> - Funzioni di ordine superiore.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_12.html" target="_blank">esempio_12.html</a></b>: Esempio.</li>
+					<br>
+				</ul>
+			</li>
+
 		</ul>
 	</body>
 </html>

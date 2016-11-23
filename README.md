@@ -58,5 +58,12 @@ Raffaele.
 			<br>
 		</ul>
 	</li>
+	<li><strong>LEZIONE N. 4</strong> - Funzioni di ordine superiore.
+		<ul>
+			<br>
+			<li><b>esempio_12.html</b>: Esempio.</li>
+			<br>
+		</ul>
+	</li>
 
 </ul>
