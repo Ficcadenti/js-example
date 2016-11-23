@@ -1,10 +1,10 @@
 # js-example
-<h2><strong> Repository per Lezioni/esempi Java Script </strong></h2>
+<h2><strong> Repository per Lezioni/esempi ECMAScript® (JavaScript) </strong></h2>
 <br>
 (c) 09/2016 - Raffaele Ficcadenti (raffaele.ficcadenti@gmail.com) <br>
-Ho cercato di raccogliere in questo repository, le basi della programmazione Jaca Script.
+Ho cercato di raccogliere in questo repository, le basi della programmazione ECMAScript® (JavaScript).
 Per ogni correzione o suggerimento, non esitate a scrivermi.<br>
-Se volete provare ogni singolo esempio andate sul mio sito <a href="http://www.raffaeleficcadenti.it/">www.raffaeleficcadenti.it</a> nella sezione: <a href="http://www.raffaeleficcadenti.it/components/corso_js.php?lang=it">i miei sviluppi/Corso Java Script</a>.<br>
+Se volete provare ogni singolo esempio andate sul mio sito <a href="http://www.raffaeleficcadenti.it/">www.raffaeleficcadenti.it</a> nella sezione: <a href="http://www.raffaeleficcadenti.it/components/corso_js.php?lang=it">i miei sviluppi/Corso ECMAScript® (JavaScript)</a>.<br>
 Buon 'coding'.
 Raffaele.
 <p>
