@@ -7,7 +7,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 
 <html>
 	<head>
-		<title>Corso JavaScript</title>
+		<title>Corso ECMAScript® (JavaScript)</title>
 		<link rel="icon" href="./assets/media/favicon.png">
 		<style>
 			@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
@@ -28,9 +28,9 @@ http://www.w3.org/TR/html4/frameset.dtd>
 		</style>
 	</head>
 	<body>
-		<h2><strong> Repository per Lezioni/esempi Java Script </strong></h2>
+		<h2><strong> Repository per Lezioni/esempi ECMAScript® (JavaScript) </strong></h2>
 		(c) 09/2016 - Raffaele Ficcadenti (raffaele.ficcadenti@gmail.com) <br>
-		Ho cercato di raccogliere in questo repository, le basi della programmazione Java Script.
+		Ho cercato di raccogliere in questo repository, le basi della programmazione ECMAScript® (JavaScript).
 		Per ogni correzione o suggerimento, non esitate a scrivermi.
 		Buon 'coding'.
 		Raffaele.
@@ -76,6 +76,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_07.html" target="_blank">esempio_07.html</a></b>: Correlazioni.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_08.html" target="_blank">esempio_08.html</a></b>: Array.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_09.html" target="_blank">esempio_09.html</a></b>: Oggetto arguments.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_10.html" target="_blank">esempio_10.html</a></b>: Oggetto Math.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_11.html" target="_blank">esempio_11.html</a></b>: Esercizi.</li>
 					<br>
 				</ul>
 			</li>

@@ -52,6 +52,10 @@ Raffaele.
 			<br>
 			<li><b>esempio_09.html</b>: Oggetto arguments.</li>
 			<br>
+			<li><b>esempio_10.html</b>: Oggetto Math.</li>
+			<br>
+			<li><b>esempio_11.html</b>: Esercizi.</li>
+			<br>
 		</ul>
 	</li>
 
