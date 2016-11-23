@@ -74,6 +74,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_06.html" target="_blank">esempio_06.html</a></b>: Oggetti.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_07.html" target="_blank">esempio_07.html</a></b>: Correlazioni.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_08.html" target="_blank">esempio_08.html</a></b>: Array.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_09.html" target="_blank">esempio_09.html</a></b>: Oggetto arguments.</li>
 					<br>
 				</ul>
 			</li>

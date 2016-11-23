@@ -106,6 +106,16 @@
 			return phis;
 		}
 
+		function remeberTo(arr,task)
+		{
+			arr.push(task);
+		}
+
+		function whatIsNext(arr)
+		{
+			return arr.shift();
+		}
+
 		var map={};
 		
 		println(JOURNAL.length);
@@ -128,7 +138,7 @@
 			var entry = JOURNAL[i];
 			if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
 			{
-				entry.events.push("peanut teeth");
+				remeberTo(entry.events,"peanut teeth");
 			}
 		}
 

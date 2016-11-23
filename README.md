@@ -48,6 +48,10 @@ Raffaele.
 			<br>
 			<li><b>esempio_07.html</b>: Correlazioni.</li>
 			<br>
+			<li><b>esempio_08.html</b>: Array.</li>
+			<br>
+			<li><b>esempio_09.html</b>: Oggetto arguments.</li>
+			<br>
 		</ul>
 	</li>
 
