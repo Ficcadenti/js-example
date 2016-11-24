@@ -56,12 +56,14 @@ Raffaele.
 			<br>
 			<li><b>esempio_11.html</b>: Esercizi.</li>
 			<br>
+			<li><b>esempio_12.html</b>: Esercizi: albero binario.</li>
+			<br>
 		</ul>
 	</li>
 	<li><strong>LEZIONE N. 4</strong> - Funzioni di ordine superiore.
 		<ul>
 			<br>
-			<li><b>esempio_12.html</b>: Esempio.</li>
+			<li><b>esempio_13.html</b>: Esempio.</li>
 			<br>
 		</ul>
 	</li>

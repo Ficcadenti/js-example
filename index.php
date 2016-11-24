@@ -78,6 +78,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_09.html" target="_blank">esempio_09.html</a></b>: Oggetto arguments.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_10.html" target="_blank">esempio_10.html</a></b>: Oggetto Math.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_11.html" target="_blank">esempio_11.html</a></b>: Esercizi.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-03 - Strutture dati (Oggetti e Array)/esempio_12.html" target="_blank">esempio_12.html</a></b>: Esercizi: albero binario.</li>
 					<br>
 				</ul>
 			</li>
@@ -85,7 +86,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 			<li><strong>LEZIONE N. 4</strong> - Funzioni di ordine superiore.
 				<ul>
 					<br>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_12.html" target="_blank">esempio_12.html</a></b>: Esempio.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_13.html" target="_blank">esempio_13.html</a></b>: Esempio.</li>
 					<br>
 				</ul>
 			</li>
