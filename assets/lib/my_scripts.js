@@ -42,6 +42,11 @@ function println(str="")
 	document.write(str+"<br>\n");
 }
 
+function print(str="")
+{
+	document.write(str);
+}
+
 function infoBrowser()
 {
 	println('Browser           : '+navigator.appName);

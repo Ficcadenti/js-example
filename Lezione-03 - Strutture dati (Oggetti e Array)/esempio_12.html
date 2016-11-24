@@ -38,6 +38,7 @@
 
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript" src="../assets/lib/alberobinario.js"></script>
+	<script type="application/x-javascript" src="../assets/lib/alberobinario_slim.js"></script>
 
 	<script type="application/x-javascript">
 		function remove(array, index)
@@ -136,63 +137,48 @@
 		var nodos=tree.successore(s);
 		
 		println("Successore di ("+s+"): "+nodos.valore);
-		//var succ=tree.successore(nodo);
-		//console.log(succ);
-
-		/*tree=removeNodo(tree,8);
-
-		println("Visita Preordine = "+tree.visitaPreordine());
-		println("Visita Postordine = "+tree.visitaPostordine());
-		println("Visita Simmetrica (ordinato) = "+tree.visitaSimmetrica());
-		println("Frontiera = "+tree.frontiera());
-		println("Altezza = "+tree.altezza());
-		println("Numero nodi = "+tree.count());
-		println("Min valore= "+tree.minValore());
-		println("Max valore = "+tree.maxValore());
-		println("Min nodo= "+tree.minNodo().valore);
-		println("Max nodo = "+tree.maxNodo().valore);
-		println("Cerca("+val+") = "+tree.cerca(val));
-		var nodo=tree.get(val);
-		println("Valore del nodo trovato: "+nodo.valore);*/
 		
 
 
-	/* SECONDO MODO DI CONCEPIRE UN ALBERO BINARIO */
-		
-
-		/*function addKey(nodo,val)
+		var tree_slim=null;
+		for(var i=0;i<valori.length;i++)
 		{
-			if(nodo==null)
+			if(tree_slim==null)
 			{
-				nodo=new Object({valore:val, sx:null, dx:null});
+				tree_slim=creaAlberoBinarioDiRicerca(valori[i]);
 			}
-			else if(val<nodo.valore)
+			else
 			{
-				nodo.sx=addKey(nodo.sx,val);
-			}
-			else if(val>nodo.valore)
-			{
-				nodo.dx=addKey(nodo.dx,val);
-			}
-
-			return nodo;
-		}
-
-		function vistaSimmetrica(tree)
-		{
-			if(tree!=null)
-			{
-				vistaSimmetrica(tree.sx);
-				println(tree.valore);
-				vistaSimmetrica(tree.dx);
+				aggiungi(tree_slim,valori[i]);
 			}
 		}
 
-		var tree=new Object({valore:14, sx:null, dx:null});
-		addKey(tree,3);
-		addKey(tree,24);
+		println("<hr>");
+		println("Visita Preordine: "+visitaPreordine(tree_slim));
+		println("Visita Postordine = "+visitaPostordine(tree_slim));
+		println("Visita Simmetrica (ordinato) = "+visitaSimmetrica(tree_slim));
+		println("Frontiera = "+frontiera(tree_slim));
+		println("Altezza = "+altezza(tree_slim));
+		println("Numero nodi = "+count(tree_slim));
+		println("Min valore= "+minValore(tree_slim));
+		println("Max valore = "+maxValore(tree_slim));
+		println("Min nodo= "+minNodo(tree_slim).valore);
+		println("Max nodo = "+maxNodo(tree_slim).valore);
+		println("Cerca("+val+") = "+cerca(tree_slim,val));
 
-		vistaSimmetrica(tree);*/
+		var nodo=get(tree_slim,val);
+		if(nodo!=null)
+		{
+			println("Valore("+val+") trovato nel nodo: "+nodo.info);
+			var p=getParent(nodo);
+			println("Parent di ("+val+"): "+p.valore);
+		}
+		else 
+		{
+			println("Valore("+val+") non trovato !!!!");	
+		}
+
+		console.log(tree_slim);
 
 
 		chiudiparagrafo();	

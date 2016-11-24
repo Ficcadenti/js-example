@@ -350,12 +350,37 @@ function AlberoDiRicerca(v)
 			}
 			else 
 			{
-				P=T.getParent();
+				P=T.parent;
 
 				while(P!=null && T === P.destro)
 				{
 					T=P;
-					P=P.getParent();
+					P=P.parent;
+				}
+
+				return P;
+			}
+		};
+
+	this.predecessore = function(val)
+		{
+			var T=this.get(val);
+			if (T==null)
+			{
+				return null;
+			}
+
+			if(T.sinistro!=null)
+			{
+				return T.sinistro.minNodo();
+			}
+			else
+			{
+				P=T.parent;
+				while(P!=null && T === P.sinistro)
+				{
+					T=P;
+					P=P.parent;
 				}
 
 				return P;
@@ -377,31 +402,6 @@ function AlberoDiRicerca(v)
 				{
 					this.destro.toArray(vtot);
 				}
-			}
-		};
-
-	this.predecessore = function(val)
-		{
-			var T=this.get(val);
-			if (T==null)
-			{
-				return null;
-			}
-
-			if(T.sinistro!=null)
-			{
-				return T.sinistro.minNodo();
-			}
-			else
-			{
-				P=T.getParent();
-				while(P!=null && T === P.sinistro)
-				{
-					T=P;
-					P=P.getParent();
-				}
-
-				return P;
 			}
 		};
 }
