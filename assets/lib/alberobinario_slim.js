@@ -314,3 +314,56 @@ function getParent(nodo)
 {
 	return nodo.parent;
 }
+
+function successore(tree,val)
+{
+	var T=get(tree,val);
+
+	if (T==null)
+	{
+		return null;
+	}
+
+	if(T.dx!=null)
+	{
+		return minNodo(T.dx);
+	}
+	else 
+	{
+		P=T.parent;
+
+		while(P!=null && T === P.dx)
+		{
+			T=P;
+			P=P.parent;
+		}
+
+		return P;
+	}
+}
+
+function predecessore(tree,val)
+{
+	var T=get(tree,val);
+	if (T==null)
+	{
+		return null;
+	}
+
+	if(T.sx!=null)
+	{
+		return minNodo(T.sx);
+	}
+	else
+	{
+		P=T.parent;
+		while(P!=null && T === P.sx)
+		{
+			T=P;
+			P=P.parent;
+		}
+
+		return P;
+	}
+}
+
