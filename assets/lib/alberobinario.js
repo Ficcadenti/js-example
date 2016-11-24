@@ -1,15 +1,35 @@
 function AlberoDiRicerca(v) 
 {
 	this.valore = v;
+	this.info = v+".info";
 	this.sinistro = null;
 	this.destro = null;
+	this.parent = null;
+
+	this.getParent = function ()
+		{
+			return this.parent;
+		};
+
+	this.getDestro = function ()
+		{
+			return this.destro;
+		};
+
+	this.getSinistro = function ()
+		{
+			return this.sinistro;
+		};
+
 	this.aggiungi = function (k) 
 		{
 			if (k < this.valore) 
 			{
 				if (this.sinistro == null) 
 				{
-					this.sinistro = new AlberoDiRicerca(k);
+					var nodo=new AlberoDiRicerca(k);
+					nodo.parent=this;
+					this.sinistro = nodo;
 				}
 				else 
 				{
@@ -20,7 +40,9 @@ function AlberoDiRicerca(v)
 			{
 				if (this.destro == null) 
 				{
-					this.destro = new AlberoDiRicerca (k);
+					var nodo=new AlberoDiRicerca(k);
+					nodo.parent=this;
+					this.destro = nodo;
 				}
 				else
 				{
@@ -191,11 +213,10 @@ function AlberoDiRicerca(v)
 			}
 
 			return 1;
-
 		};
 
 	this.altezza = function() 
-	{
+		{
 			if (this.sinistro == null && this.destro == null) 
 			{
 				return 0;
@@ -261,7 +282,7 @@ function AlberoDiRicerca(v)
 			return fs + fd;
 		};
 
-	this.min = function() 
+	this.minValore = function() 
 		{
 			if (this.sinistro==null)
 			{
@@ -269,11 +290,11 @@ function AlberoDiRicerca(v)
 			}
 			else
 			{
-				return this.sinistro.min();
+				return this.sinistro.minValore();
 			}
 		};
 
-	this.max = function() 
+	this.maxValore = function() 
 		{
 			if (this.destro==null)
 			{
@@ -281,7 +302,81 @@ function AlberoDiRicerca(v)
 			}
 			else
 			{
-				return this.destro.max();
+				return this.destro.maxValore();
+			}
+		};
+
+	this.minNodo = function() 
+		{
+			if (this==null)
+			{
+				return null;
+			}
+			if (this.sinistro==null)
+			{
+				return this;
+			}
+			
+			return this.sinistro.minNodo();
+		};
+
+	this.maxNodo = function() 
+		{
+			if (this==null)
+			{
+				return null;
+			}
+
+			if (this.destro==null)
+			{
+				return this;
+			}
+			
+			return this.destro.maxNodo();
+		};
+
+	this.successore = function(val)
+		{
+			var T=this.get(val);
+
+			if (T==null)
+			{
+				return null;
+			}
+
+			if(T.destro!=null)
+			{
+				return T.destro.minNodo();
+			}
+			else 
+			{
+				P=T.getParent();
+
+				while(P!=null && T === P.destro)
+				{
+					T=P;
+					P=P.getParent();
+				}
+
+				return P;
+			}
+		};
+
+	this.toArray = function(vtot)
+		{	
+			if(this!=null)
+			{
+				vtot.push(this.valore);
+
+				if (this.sinistro != null) 
+				{
+					this.sinistro.toArray(vtot);
+				}
+
+				if (this.destro != null)
+				{
+					this.destro.toArray(vtot);
+				}
 			}
 		};
 }

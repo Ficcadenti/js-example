@@ -40,19 +40,61 @@
 	<script type="application/x-javascript" src="../assets/lib/alberobinario.js"></script>
 
 	<script type="application/x-javascript">
+		function remove(array, index)
+		{
+			return array.slice(0,index).concat(array.slice(index+1));
+		}
+
+		function removeNodo(tree,valore)
+		{
+			var tree_array=[];
+			var new_tree=null;
+
+			tree.toArray(tree_array);
+
+			println("array="+tree_array);
+
+			println(tree_array.indexOf(valore));
+			tree_array=remove(tree_array,tree_array.indexOf(valore));
+			println("array="+tree_array);
+
+
+			for(var i=0;i<tree_array.length;i++)
+			{
+				if(new_tree==null)
+				{
+					new_tree=new AlberoDiRicerca(tree_array[i]);
+				}
+				else
+				{
+					new_tree.aggiungi(tree_array[i]);
+				}
+			}
+
+			return new_tree;
+		}
+
 		infoBrowser();
 		capitolo("Strutture Dati");
 		paragrafo("Esercizio 1: albero binario");
 
-		var val=7;
+		var val=12;
+		var valori=[6,2,1,4,3,8,12,9,15];
+		//var valori=[1,3,2];
 
-		var tree=new AlberoDiRicerca(10);
-		tree.aggiungi(1);
-		tree.aggiungi(11);
-		tree.aggiungi(6);
-		tree.aggiungi(15);
-		tree.aggiungi(7);
-		tree.aggiungi(8);
+		var tree=null;
+
+		for(var i=0;i<valori.length;i++)
+		{
+			if(tree==null)
+			{
+				tree=new AlberoDiRicerca(valori[i]);
+			}
+			else
+			{
+				tree.aggiungi(valori[i]);
+			}
+		}
 
 		/*for(var i=0;i<5;i++)
 		{
@@ -67,14 +109,87 @@
 		println("Frontiera = "+tree.frontiera());
 		println("Altezza = "+tree.altezza());
 		println("Numero nodi = "+tree.count());
-		println("Max = "+tree.max());
-		println("Min = "+tree.min());
+		println("Min valore= "+tree.minValore());
+		println("Max valore = "+tree.maxValore());
+		println("Min nodo= "+tree.minNodo().valore);
+		println("Max nodo = "+tree.maxNodo().valore);
 		println("Cerca("+val+") = "+tree.cerca(val));
 
+	
 		var nodo=tree.get(val);
-		console.log(nodo);
+		if(nodo!=null)
+		{
+			println("Valore("+val+") trovato nel nodo: "+nodo.info);
+			var p=nodo.getParent();
+			println("Parent: "+p.valore);
+		}
+		else 
+		{
+			println("Valore("+val+") non trovato !!!!");	
+		}
 
-		println("Valore del nodo trovato: "+nodo.valore);
+		var s=4;
+		var nodo=tree.successore(s);
+		
+		println("Successore di ("+s+"): "+nodo.valore);
+		//var succ=tree.successore(nodo);
+		//console.log(succ);
+
+		/*tree=removeNodo(tree,8);
+
+		println("Visita Preordine = "+tree.visitaPreordine());
+		println("Visita Postordine = "+tree.visitaPostordine());
+		println("Visita Simmetrica (ordinato) = "+tree.visitaSimmetrica());
+		println("Frontiera = "+tree.frontiera());
+		println("Altezza = "+tree.altezza());
+		println("Numero nodi = "+tree.count());
+		println("Min valore= "+tree.minValore());
+		println("Max valore = "+tree.maxValore());
+		println("Min nodo= "+tree.minNodo().valore);
+		println("Max nodo = "+tree.maxNodo().valore);
+		println("Cerca("+val+") = "+tree.cerca(val));
+		var nodo=tree.get(val);
+		println("Valore del nodo trovato: "+nodo.valore);*/
+		
+
+
+	/* SECONDO MODO DI CONCEPIRE UN ALBERO BINARIO */
+		
+
+		/*function addKey(nodo,val)
+		{
+			if(nodo==null)
+			{
+				nodo=new Object({valore:val, sx:null, dx:null});
+			}
+			else if(val<nodo.valore)
+			{
+				nodo.sx=addKey(nodo.sx,val);
+			}
+			else if(val>nodo.valore)
+			{
+				nodo.dx=addKey(nodo.dx,val);
+			}
+
+			return nodo;
+		}
+
+		function vistaSimmetrica(tree)
+		{
+			if(tree!=null)
+			{
+				vistaSimmetrica(tree.sx);
+				println(tree.valore);
+				vistaSimmetrica(tree.dx);
+			}
+		}
+
+		var tree=new Object({valore:14, sx:null, dx:null});
+		addKey(tree,3);
+		addKey(tree,24);
+
+		vistaSimmetrica(tree);*/
+
 
 		chiudiparagrafo();	
 	</script>
