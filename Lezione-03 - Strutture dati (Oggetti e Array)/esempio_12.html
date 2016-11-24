@@ -78,7 +78,7 @@
 		capitolo("Strutture Dati");
 		paragrafo("Esercizio 1: albero binario");
 
-		var val=12;
+		var val=4;
 		var valori=[6,2,1,4,3,8,12,9,15];
 		//var valori=[1,3,2];
 
@@ -121,17 +121,21 @@
 		{
 			println("Valore("+val+") trovato nel nodo: "+nodo.info);
 			var p=nodo.getParent();
-			println("Parent: "+p.valore);
+			println("Parent di ("+val+"): "+p.valore);
 		}
 		else 
 		{
 			println("Valore("+val+") non trovato !!!!");	
 		}
 
-		var s=4;
-		var nodo=tree.successore(s);
+		var p=val;
+		var nodop=tree.predecessore(p);
+		println("Precedessore di ("+p+"): "+nodop.valore);
+
+		var s=val;
+		var nodos=tree.successore(s);
 		
-		println("Successore di ("+s+"): "+nodo.valore);
+		println("Successore di ("+s+"): "+nodos.valore);
 		//var succ=tree.successore(nodo);
 		//console.log(succ);
 

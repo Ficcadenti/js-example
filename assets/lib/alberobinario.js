@@ -379,4 +379,30 @@ function AlberoDiRicerca(v)
 				}
 			}
 		};
+
+	this.predecessore = function(val)
+		{
+			var T=this.get(val);
+			if (T==null)
+			{
+				return null;
+			}
+
+			if(T.sinistro!=null)
+			{
+				return T.sinistro.minNodo();
+			}
+			else
+			{
+				P=T.getParent();
+				while(P!=null && T === P.sinistro)
+				{
+					T=P;
+					P=P.getParent();
+				}
+
+				return P;
+			}
+		};
 }
+
