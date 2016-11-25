@@ -65,6 +65,10 @@ Raffaele.
 			<br>
 			<li><b>esempio_13.html</b>: Esempio.</li>
 			<br>
+			<li><b>esempio_14.html</b>: JSON.</li>
+			<br>
+			<li><b>esempio_15.html</b>: Esercizi.</li>
+			<br>
 		</ul>
 	</li>
 
