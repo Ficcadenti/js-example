@@ -54,6 +54,9 @@
 		var ancestry=JSON.parse(ANCESTRY_FILE);
 		println(ancestry.length);
 
+		println(ANCESTRY_FILE);
+
+
 		/*for(var i=0;i<ancestry.length;i++)
 		{
 			println(ancestry[i].name);
@@ -82,15 +85,27 @@
 			return mapped;
 		}
 
-		/*console.log(filter(ancestry,function(person)
+		function reduce(array,combine,start)
+		{
+			var current=start;
+  			for (var i = 0; i < array.length; i++)
+  			{
+    			current = combine(current, array[i]);
+  			}
+  			return current;
+		}
+
+		
+
+		console.log(filter(ancestry,function(person)
 			{
 				return person.born > 1900 && person.born < 1925;
 			}));
 
-		console.log(filter(ancestry,function(person)
+		console.log(ancestry.filter(function(item)
 			{
-				return person.father == "Carel Haverbeke";
-			}));*/
+				return item.father == "Carel Haverbeke";
+			}));
 
 
 		var overNovanta=filter(ancestry,function(person)
@@ -99,11 +114,22 @@
 			});
 		console.log(overNovanta);
 
+		console.log(reduce([1, 2, 3, 4], function(a, b) 
+			{
+				console.log(a,b);
+			  	return a + b;
+			}, 0));
+
+		console.log(ancestry.reduce(function(min, cur) 
+			{
+			  if (cur.born < min.born) return cur;
+			  else return min;
+			}));
+
 		var arrayDiNomi=map(overNovanta,function(element)
 			{
 				return element.name;
 			});
-
 		println(arrayDiNomi.join("-"));
 
 		arrayDiNomi.map(function(item)
@@ -127,8 +153,14 @@
 			return "numero: "+item;
 		}
 
+		function combine(a, b) 
+		{
+		  	return a + b;
+		}
+
 		console.log(a.filter(test));
 		console.log(a.map(transform));
+		console.log(a.reduce(combine,0));
 
 		
 		chiudiparagrafo();	
