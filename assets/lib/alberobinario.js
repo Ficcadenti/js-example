@@ -387,22 +387,29 @@ function AlberoDiRicerca(v)
 			}
 		};
 
-	this.toArray = function(vtot)
+	this.toArray = function()
 		{	
-			if(this!=null)
+			var vtot=[];
+
+			if(this==null)
 			{
-				vtot.push(this.valore);
+				return vtot;
+			}	
+			
 
-				if (this.sinistro != null) 
-				{
-					this.sinistro.toArray(vtot);
-				}
-
-				if (this.destro != null)
-				{
-					this.destro.toArray(vtot);
-				}
+			if (this.sinistro != null) 
+			{
+				vtot.push(this.sinistro.toArray());
 			}
+
+			vtot.push(this.valore);
+
+			if (this.destro != null)
+			{
+				vtot.push(this.destro.toArray());
+			}
+
+			return vtot;
 		};
 }
 

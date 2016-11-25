@@ -37,50 +37,16 @@
 	<hr>
 
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript" src="../assets/lib/alberobinario.min.js"></script>
+	<script type="application/x-javascript" src="../assets/lib/alberobinario.js"></script>
 	<script type="application/x-javascript" src="../assets/lib/alberobinario_slim.js"></script>
 
 	<script type="application/x-javascript">
-		function remove(array, index)
-		{
-			return array.slice(0,index).concat(array.slice(index+1));
-		}
-
-		function removeNodo(tree,valore)
-		{
-			var tree_array=[];
-			var new_tree=null;
-
-			tree.toArray(tree_array);
-
-			println("array="+tree_array);
-
-			println(tree_array.indexOf(valore));
-			tree_array=remove(tree_array,tree_array.indexOf(valore));
-			println("array="+tree_array);
-
-
-			for(var i=0;i<tree_array.length;i++)
-			{
-				if(new_tree==null)
-				{
-					new_tree=new AlberoDiRicerca(tree_array[i]);
-				}
-				else
-				{
-					new_tree.aggiungi(tree_array[i]);
-				}
-			}
-
-			return new_tree;
-		}
-
 		infoBrowser();
 		capitolo("Strutture Dati");
 		paragrafo("Esercizio 1: albero binario");
 
-		var val=4;
-		var valori=[6,2,1,4,3,8,12,9,15,7,11,22,33];
+		var val=6;
+		var valori=[6,2,8,1,4,12,3,9,15];
 		//var valori=[1,3,2];
 
 		var tree=null;
@@ -122,7 +88,10 @@
 		{
 			println("Valore("+val+") trovato nel nodo: "+nodo.info);
 			var p=nodo.getParent();
-			println("Parent di ("+val+"): "+p.valore);
+			if(p!=null)
+			{
+				println("Parent di ("+val+"): "+p.valore);
+			}
 		}
 		else 
 		{
@@ -136,6 +105,10 @@
 		var s=val;
 		var nodos=tree.successore(s);
 		println("Successore di ("+s+"): "+nodos.valore);
+
+		
+		println("Array: "+tree.toArray());
+
 		
 
 		chiudiparagrafo();	
@@ -171,7 +144,10 @@
 		{
 			println("Valore("+val+") trovato nel nodo: "+nodo.info);
 			var p=getParent(nodo);
-			println("Parent di ("+val+"): "+p.valore);
+			if(p!=null)
+			{
+				println("Parent di ("+val+"): "+p.valore);
+			}
 		}
 		else 
 		{
@@ -185,6 +161,10 @@
 		s=val;
 		nodos=successore(tree_slim,s);
 		println("Successore di ("+s+"): "+nodos.valore);
+
+		cancella(tree_slim,34);
+		println("Array: "+toArray(tree_slim));
+
 
 		console.log(tree_slim);
 
