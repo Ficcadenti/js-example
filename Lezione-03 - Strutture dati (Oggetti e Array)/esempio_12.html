@@ -106,7 +106,8 @@
 		var nodos=tree.successore(s);
 		println("Successore di ("+s+"): "+nodos.valore);
 
-		
+		tree.cancella(val);
+		console.log(tree);
 		println("Array: "+tree.toArray());
 
 		
@@ -165,9 +166,7 @@
 		cancella(tree_slim,34);
 		println("Array: "+toArray(tree_slim));
 
-
-		console.log(tree_slim);
-
+		console.log(tree_slim);		
 
 		chiudiparagrafo();	
 	</script>

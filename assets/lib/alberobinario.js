@@ -411,5 +411,67 @@ function AlberoDiRicerca(v)
 
 			return vtot;
 		};
+
+	this.cancella = function(val)
+		{
+			var z=this.get(val);
+			if (z!=null)
+			{
+				
+				var y=null;
+				var x=null;
+				if ( (z.sinistro == null) || (z.destro == null) )
+				{
+					y=z;
+				}
+				else
+				{
+					y=this.successore(z.valore);
+				}
+
+				if (y.sinistro != null)
+				{
+					x=y.sinistro;
+				}
+				else
+				{
+					x=y.destro;
+				}
+
+				if(x!=null)
+				{
+					x.parent=y.parent;
+				}
+
+				if (y.parent==null)
+				{
+					this.sinistro=x.sinistro;
+					this.destro=x.destro;
+					this.valore=x.valore;
+					this.parent=x.parent;
+					this.info=x.info;
+				}
+				else
+				{
+					if(y.parent.sx==y)	
+					{
+						y.parent.sinistro=x;
+					}
+					else
+					{
+						y.parent.destro=x;
+					}
+				}
+
+				if(y!=z)
+				{
+					z.valore=y.valore;
+				}
+			}
+			else
+			{
+				println(val+" non esiste nell'albero !!!")	;
+			}
+		};
 }
 

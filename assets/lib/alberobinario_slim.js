@@ -399,9 +399,6 @@ function cancella(tree,val)
 		
 		var y=null;
 		var x=null;
-		console.log(z.sx);
-		console.log(z.dx);
-
 		if ( (z.sx == null) || (z.dx == null) )
 		{
 			y=z;
@@ -409,7 +406,6 @@ function cancella(tree,val)
 		else
 		{
 			y=successore(tree,z.valore);
-			console.log(y);
 		}
 
 		if (y.sx != null)
@@ -423,33 +419,27 @@ function cancella(tree,val)
 
 		if(x!=null)
 		{
-			console.log(y.parent);
 			x.parent=y.parent;
 		}
 
 		if (y.parent==null)
 		{
-			console.log("1");
 			tree=x;
 		}
 		else
 		{
 			if(y.parent.sx==y)	
 			{
-				console.log("2");
 				y.parent.sx=x;
 			}
 			else
 			{
-				console.log("3");
 				y.parent.dx=x;
-				console.log(y.parent.dx);
 			}
 		}
 
 		if(y!=z)
 		{
-			console.log("4");
 			z.valore=y.valore;
 		}
 	}
