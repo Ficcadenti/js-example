@@ -42,125 +42,142 @@
 		capitolo("Funzioni di ordine superiore");
 		paragrafo("JSON");
 
-		var json_obj={"nome":"Raffaele", "cognome":"Ficcadenti", "email":"raffaele.ficcadenti@gmail.com"};
-		var str=JSON.stringify(json_obj);
+			var json_obj={"nome":"Raffaele", "cognome":"Ficcadenti", "email":"raffaele.ficcadenti@gmail.com"};
+			var str=JSON.stringify(json_obj);
 
-		println(str);
+			println(str);
 
-		println(JSON.parse(str).nome);
-		println(JSON.parse(str).cognome);
-		println(JSON.parse(str).email);
+			println(JSON.parse(str).nome);
+			println(JSON.parse(str).cognome);
+			println(JSON.parse(str).email);
 
-		var ancestry=JSON.parse(ANCESTRY_FILE);
-		println(ancestry.length);
+			var ancestry=JSON.parse(ANCESTRY_FILE);
+			println(ancestry.length);
 
-		println(ANCESTRY_FILE);
+			println(ANCESTRY_FILE);
 
-
-		/*for(var i=0;i<ancestry.length;i++)
-		{
-			println(ancestry[i].name);
-		}*/
-
-		function filter(array,test)
-		{
-			var passed=[];
-			for(var i=0;i<array.length;i++)
+			/*
+			for(var i=0;i<ancestry.length;i++)
 			{
-				if(test(array[i]))
-				{
-					passed.push(array[i]);
-				}
+				println(ancestry[i].name);
 			}
-			return passed;
-		}
-
-		function map(array,transorm)
-		{
-			var mapped=[];
-			for(var i=0;i<array.length;i++)
-			{
-				mapped.push(transorm(array[i]));
-			}
-			return mapped;
-		}
-
-		function reduce(array,combine,start)
-		{
-			var current=start;
-  			for (var i = 0; i < array.length; i++)
-  			{
-    			current = combine(current, array[i]);
-  			}
-  			return current;
-		}
+			*/
+		chiudiparagrafo();
 
 		
+		paragrafo("Ridefinire filter su array.");
 
-		console.log(filter(ancestry,function(person)
+			function filter(array,test)
 			{
-				return person.born > 1900 && person.born < 1925;
-			}));
+				var passed=[];
+				for(var i=0;i<array.length;i++)
+				{
+					if(test(array[i]))
+					{
+						passed.push(array[i]);
+					}
+				}
+				return passed;
+			}
 
-		console.log(ancestry.filter(function(item)
+			console.log(filter(ancestry,function(person)
+				{
+					return person.born > 1900 && person.born < 1925;
+				}));
+
+			console.log(ancestry.filter(function(item)
+				{
+					return item.father == "Carel Haverbeke";
+				}));
+
+
+			var overNovanta=filter(ancestry,function(person)
+				{
+					return person.died - person.born > 90;
+				});
+			console.log(overNovanta);
+
+		chiudiparagrafo();
+
+
+		
+		paragrafo("Ridefinire map su array.");
+
+			function map(array,transorm)
 			{
-				return item.father == "Carel Haverbeke";
-			}));
+				var mapped=[];
+				for(var i=0;i<array.length;i++)
+				{
+					mapped.push(transorm(array[i]));
+				}
+				return mapped;
+			}
 
-
-		var overNovanta=filter(ancestry,function(person)
-			{
-				return person.died - person.born > 90;
-			});
-		console.log(overNovanta);
-
-		console.log(reduce([1, 2, 3, 4], function(a, b) 
-			{
-				console.log(a,b);
-			  	return a + b;
-			}, 0));
-
-		console.log(ancestry.reduce(function(min, cur) 
-			{
-			  if (cur.born < min.born) return cur;
-			  else return min;
-			}));
-
-		var arrayDiNomi=map(overNovanta,function(element)
+			var arrayDiNomi=map(overNovanta,function(element)
 			{
 				return element.name;
 			});
-		println(arrayDiNomi.join("-"));
+			println(arrayDiNomi.join("-"));
 
-		arrayDiNomi.map(function(item)
+			arrayDiNomi.map(function(item)
+				{
+					println("MAP: "+item);
+				});
+
+		chiudiparagrafo();
+
+		paragrafo("Ridefinire reduce su array.");
+
+			function reduce(array,combine,start)
 			{
-				println("MAP: "+item);
-			});
+				var current=start;
+	  			for (var i = 0; i < array.length; i++)
+	  			{
+	    			current = combine(current, array[i]);
+	  			}
+	  			return current;
+			}
 
+
+			console.log(reduce([1, 2, 3, 4], function(a, b) 
+				{
+					console.log(a,b);
+				  	return a + b;
+				}, 0));
+
+			console.log(ancestry.reduce(function(min, cur) 
+				{
+				  if (cur.born < min.born) return cur;
+				  else return min;
+				}));
+
+		chiudiparagrafo();
 
 		var a=[1,2,3,4,5,6,7,8,9,10];
 
-		function test(item)
-		{
-			if((item>5)&&(item<10)) 
+		paragrafo("Filter,Map,Reduce standard per array.");
+
+			function test(item)
 			{
-				return true;
+				if((item>5)&&(item<10)) 
+				{
+					return true;
+				}
 			}
-		}
 
-		function transform(item)
-		{
-			return "numero: "+item;
-		}
+			function transform(item)
+			{
+				return "numero: "+item;
+			}
 
-		function combine(a, b) 
-		{
-		  	return a + b;
-		}
+			function combine(a, b) 
+			{
+			  	return a + b;
+			}
 
-		console.log(a.filter(test));
-		console.log(a.map(transform));
-		console.log(a.reduce(combine,0));
+			println(a.filter(test));
+			println(a.map(transform));
+			println(a.reduce(combine,0));
 
 		
 		chiudiparagrafo();	
