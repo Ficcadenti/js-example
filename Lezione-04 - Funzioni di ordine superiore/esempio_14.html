@@ -38,6 +38,25 @@
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript" src="../assets/lib/ancestry.js"></script>
 	<script type="application/x-javascript">
+
+		function showObj(obj)
+		{
+			for(var value in obj)
+			{
+				if ( typeof obj[value] != "object" ) 
+				{
+					document.write(value+": "+obj[value]+" ");	
+				}
+				else 
+				{
+					document.write("obj["+value+"]=> {");
+					showObj(obj[value]);
+					document.write("}");
+					println();
+				}
+			}
+		}
+
 		infoBrowser();
 		capitolo("Funzioni di ordine superiore");
 		paragrafo("JSON");
@@ -62,6 +81,7 @@
 				println(ancestry[i].name);
 			}
 			*/
+
 		chiudiparagrafo();
 
 		
@@ -80,22 +100,24 @@
 				return passed;
 			}
 
-			console.log(filter(ancestry,function(person)
+			println("<b>Nate tra 1990 e 1995 esclusi:</b>");
+			showObj(filter(ancestry,function(person)
 				{
 					return person.born > 1900 && person.born < 1925;
 				}));
 
-			console.log(ancestry.filter(function(item)
+			println("<b>Nome specifico:</b>");
+			showObj(ancestry.filter(function(item)
 				{
 					return item.father == "Carel Haverbeke";
 				}));
 
-
+			println("<b>Over 90:</b>");
 			var overNovanta=filter(ancestry,function(person)
 				{
 					return person.died - person.born > 90;
 				});
-			console.log(overNovanta);
+			showObj(overNovanta);
 
 		chiudiparagrafo();
 
@@ -123,6 +145,12 @@
 				{
 					println("MAP: "+item);
 				});
+			
+			var p=arrayDiNomi.map(function(item)
+				{
+					return item;
+				});
+			console.log(p);
 
 		chiudiparagrafo();
 
@@ -138,18 +166,18 @@
 	  			return current;
 			}
 
-
-			console.log(reduce([1, 2, 3, 4], function(a, b) 
+			println("<b>Reduce [1, 2, 3, 4]:</b>");
+			println(reduce([1, 2, 3, 4], function(a, b) 
 				{
-					console.log(a,b);
 				  	return a + b;
 				}, 0));
 
-			console.log(ancestry.reduce(function(min, cur) 
+			println("<b>Reduce ancestry, prende il nato prima:</b>");
+			println(JSON.stringify(ancestry.reduce(function(min, cur) 
 				{
 				  if (cur.born < min.born) return cur;
 				  else return min;
-				}));
+				})));
 
 		chiudiparagrafo();
 
