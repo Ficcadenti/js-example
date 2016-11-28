@@ -86,7 +86,7 @@
 		paragrafo("Interferenza tra prototipi");
 		Object.prototype.nonmap="ciao";
 
-		//Object.defineProperty(Object.prototype, "nonmap_quasiok",{enumerable:false, value:"mi hai trovato!!!"});
+		Object.defineProperty(Object.prototype, "nonmap_quasiok",{enumerable:false, value:"mi hai trovato!!!"});
 
 		var map={};
 		function storePhi(event,phi)
