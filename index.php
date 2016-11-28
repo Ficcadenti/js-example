@@ -28,7 +28,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 		</style>
 	</head>
 	<body>
-		<h2><strong> Repository per Lezioni/esempi ECMAScript® (JavaScript) </strong></h2>
+		<h2><strong> Repository per lezioni/esempi ECMAScript® (JavaScript) </strong></h2>
 		(c) 09/2016 - Raffaele Ficcadenti (raffaele.ficcadenti@gmail.com) <br>
 		Ho cercato di raccogliere in questo repository, le basi della programmazione ECMAScript® (JavaScript).
 		Per ogni correzione o suggerimento, non esitate a scrivermi.
