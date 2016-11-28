@@ -175,8 +175,14 @@
 			println("<b>Reduce ancestry, prende il nato prima:</b>");
 			println(JSON.stringify(ancestry.reduce(function(min, cur) 
 				{
-				  if (cur.born < min.born) return cur;
-				  else return min;
+				  	if (cur.born < min.born) 
+				  	{
+				  		return cur;
+				  	}
+				  	else
+				  	{
+				  		return min;
+				  	}
 				})));
 
 		chiudiparagrafo();

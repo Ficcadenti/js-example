@@ -94,6 +94,14 @@ http://www.w3.org/TR/html4/frameset.dtd>
 				</ul>
 			</li>
 
+			<li><strong>LEZIONE N. 5</strong> - Vita segrata degli oggetti.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_17.html" target="_blank">esempio_17.html</a></b>: Esempio.</li>
+					<br>
+				</ul>
+			</li>
+
 		</ul>
 	</body>
 </html>
