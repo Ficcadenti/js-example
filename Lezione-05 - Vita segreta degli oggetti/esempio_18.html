@@ -82,6 +82,12 @@
 		println("coniglioGiallo.type="+coniglioGiallo.type);
 		println("coniglio.type="+coniglio.prototype.type);
 
+		chiudiparagrafo();
+		paragrafo("Interferenza tra prototipi");
+		Object.prototype.nonmap="ciao";
+
+		//Object.defineProperty(Object.prototype, "nonmap_quasiok",{enumerable:false, value:"mi hai trovato!!!"});
+
 		var map={};
 		function storePhi(event,phi)
 		{
@@ -91,12 +97,48 @@
 		storePhi("birra",1);
 		storePhi("vino",13);
 
+		
 		for(var evt in map)
 		{
-			var phi=map[evt];
+			if(map.hasOwnProperty(evt))
+			{
+				var phi=map[evt];
+				println("phi("+evt+")= "+phi);
+			}
+		}
+
+		println(map.nonmap_quasiok);
+
+		println("nonmap" in map);
+		println("toString" in map);
+		println("nonmap_quasiok" in map);
+		println(map.hasOwnProperty("nonmap_quasiok"));
+		
+		chiudiparagrafo();
+
+		paragrafo("Oggetti senza prototipo");
+
+		var map1=Object.create(null);
+		function storePhi1(event,phi)
+		{
+			map1[event]=phi;
+		}
+		storePhi1("pizza",10);
+		storePhi1("birra",1);
+		storePhi1("vino",13);
+
+		for(var evt in map1)
+		{
+			var phi=map1[evt];
 			println("phi("+evt+")= "+phi);
 		}
-		
+
+		println("nonmap" in map1);
+		println("toString" in map1);
+		println("nonmap_quasiok" in map1);
+
+
+
 		chiudiparagrafo();
 	</script>
 
