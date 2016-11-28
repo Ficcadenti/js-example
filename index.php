@@ -88,7 +88,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_13.html" target="_blank">esempio_13.html</a></b>: Esempio.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_14.html" target="_blank">esempio_14.html</a></b>: JSON.</li>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_15.html" target="_blank">esempio_15.html</a></b>: Esercizi.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_15.html" target="_blank">esempio_15.html</a></b>: Oggetto this.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-04 - Funzioni di ordine superiore/esempio_16.html" target="_blank">esempio_16.html</a></b>: Esercizi.</li>
 					<br>
 				</ul>
 			</li>

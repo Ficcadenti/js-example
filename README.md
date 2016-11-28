@@ -67,7 +67,9 @@ Raffaele.
 			<br>
 			<li><b>esempio_14.html</b>: JSON.</li>
 			<br>
-			<li><b>esempio_15.html</b>: Esercizi.</li>
+			<li><b>esempio_15.html</b>: Oggetto this.</li>
+			<br>
+			<li><b>esempio_16.html</b>: Esercizi.</li>
 			<br>
 		</ul>
 	</li>

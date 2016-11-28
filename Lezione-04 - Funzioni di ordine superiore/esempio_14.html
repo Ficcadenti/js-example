@@ -209,6 +209,107 @@
 
 		
 		chiudiparagrafo();	
+
+		paragrafo("Per finire.");
+
+		var byName=[];
+		ancestry.forEach(function(person) 
+			{
+  				byName[person.name] = person;
+			});
+
+		showObj(byName["Philibert Haverbeke"]);
+
+		function reduceAncestors(person, f, defaultValue) 
+		{
+			function valueFor(person) 
+			{
+				if (person == null)
+				{
+					return defaultValue;
+				}
+				else
+				{
+					return f(person, valueFor(byName[person.mother]),valueFor(byName[person.father]));
+				}
+			}
+			return valueFor(person);
+		}
+
+		function sharedDNA(person, fromMother, fromFather) 
+		{
+			if (person.name == "Pauwels van Haverbeke")
+			{
+				return 1;
+			}
+			else
+			{
+				return (fromMother + fromFather) / 2;
+			}
+		}
+
+		println();
+		var ph = byName["Philibert Haverbeke"];
+		println(reduceAncestors(ph, sharedDNA, 0) / 4);
+
+		function countAncestors(person, test) 
+		{
+			function combine(current, fromMother, fromFather) 
+			{
+				var thisOneCounts = current != person && test(current);
+				return fromMother + fromFather + (thisOneCounts ? 1 : 0);
+			}
+			return reduceAncestors(person, combine, 0);
+		}
+		
+		function longLivingPercentage(person) 
+		{
+			var all = countAncestors(person, function(person) 
+				{
+					return true;
+				});
+
+			var longLiving = countAncestors(person, function(person) 
+				{
+					return (person.died - person.born) >= 70;
+				});
+			return longLiving / all;
+		}
+		
+		println(longLivingPercentage(byName["Emile Haverbeke"]));
+
+
+		var theSet = ["Carel Haverbeke", "Maria van Brussel","Donald Duck"];
+		
+		function isInSet(set, person) 
+		{
+  			return set.indexOf(person.name) > -1;
+		}
+
+		console.log(ancestry.filter(function(person) 
+		{
+  			return isInSet(theSet, person);
+		}));
+		console.log(ancestry.filter(isInSet.bind(null, theSet)));
+
+
+		
+	    var fn = function(){
+	        println(this.x);
+	    }
+	    var obj = {
+	        x: 30
+	    }
+
+	    //metodo call
+	    fn.call(obj);
+	     
+	    //metodo bind
+	    var bound = fn.bind(obj);
+	    bound(); 
+
+
+		chiudiparagrafo();			
 	</script>
 
 	<hr>
