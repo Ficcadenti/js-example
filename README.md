@@ -78,7 +78,9 @@ Raffaele.
 	<li><strong>LEZIONE N. 5</strong> - Vita segrata degli oggetti.
 		<ul>
 			<br>
-			<li><b>esempio_17.html</b>: Esempio.</li>
+			<li><b>esempio_17.html</b>: Prototipi.</li>
+			<br>
+			<li><b>esempio_18.html</b>: Costruttori.</li>
 			<br>
 		</ul>
 	</li>
