@@ -37,25 +37,6 @@
 
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript">
-
-		function showObj(obj)
-		{
-			for(var value in obj)
-			{
-				if ( typeof obj[value] != "object" ) 
-				{
-					document.write(value+": "+obj[value]+" ");	
-				}
-				else 
-				{
-					document.write("obj["+value+"]=> {");
-					showObj(obj[value]);
-					document.write("}");
-					println();
-				}
-			}
-		}
-
 		infoBrowser();
 		capitolo("La vita segreta degli oggetti");
 		paragrafo("Prototipi");

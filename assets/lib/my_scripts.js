@@ -56,3 +56,30 @@ function infoBrowser()
 	println('Piattaforma       : '+navigator.platform);
 	println('User Agent        : '+navigator.userAgent);
 }
+
+function stampaObj(obj)
+{
+	print("{");
+	showObj(obj);
+	function showObj(obj)
+	{
+		for(var value in obj)
+		{
+			if(obj.hasOwnProperty(value))
+			{
+				if ( typeof obj[value] != "object" ) 
+				{
+					print(value+": \""+obj[value]+"\", ");	
+				}
+				else 
+				{
+					print("obj["+value+"]=> {");
+					showObj(obj[value]);
+					print("}, ");
+				}
+			}
+		}
+	}
+
+	println("}");
+}
