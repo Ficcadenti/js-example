@@ -83,3 +83,14 @@ function stampaObj(obj)
 
 	println("}");
 }
+
+var giorniDellaSettimana = {
+     
+    lunedi:    Symbol(),
+    martedi:   Symbol(),
+    mercoledi: Symbol(),
+    giovedi:   Symbol(),
+    venerdi:   Symbol(),
+    sabato:    Symbol(),
+    domenica:  Symbol()
+};

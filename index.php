@@ -101,6 +101,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_17.html" target="_blank">esempio_17.html</a></b>: Protptipi.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_18.html" target="_blank">esempio_18.html</a></b>: Costruttori.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_19.html" target="_blank">esempio_19.html</a></b>: ECMAScript 6 - Definire un oggetto con 'class'.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_20.html" target="_blank">esempio_19.html</a></b>: Reflection.</li>
 					<br>
 				</ul>
 			</li>

@@ -82,6 +82,10 @@ Raffaele.
 			<br>
 			<li><b>esempio_18.html</b>: Costruttori.</li>
 			<br>
+			<li><b>esempio_19.html</b>: ECMAScript 6 - Definire un oggetto con 'class'.</li>
+			<br>
+			<li><b>esempio_20.html</b>: Reflection.</li>
+			<br>
 		</ul>
 	</li>
 
