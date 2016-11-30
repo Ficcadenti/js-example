@@ -57,9 +57,10 @@ function infoBrowser()
 	println('User Agent        : '+navigator.userAgent);
 }
 
-function stampaObj(obj)
+
+function stampaObj(name,obj)
 {
-	print("{");
+	print("<b>"+name+"</b> type:  "+obj.constructor.name+" value: {");
 	showObj(obj);
 	function showObj(obj)
 	{
@@ -84,13 +85,36 @@ function stampaObj(obj)
 	println("}");
 }
 
-var giorniDellaSettimana = {
-     
-    lunedi:    Symbol(),
-    martedi:   Symbol(),
-    mercoledi: Symbol(),
-    giovedi:   Symbol(),
-    venerdi:   Symbol(),
-    sabato:    Symbol(),
-    domenica:  Symbol()
-};
+function infoObj(obj)
+{
+	println("-------------------------------------------------");
+	var p; 
+	println("<b>Propriet\xE0 di ["+obj.constructor.name+"]</b>")
+	for (p in obj) 
+	{
+		if ((typeof obj[p] != "function" && obj.hasOwnProperty(p)) )
+		{
+			println(" -> "+p+": "+obj[p]); 
+		}
+	}	
+
+	println("<b>Metodi di ["+obj.constructor.name+"]</b>");
+
+	for (p in obj) 
+	{
+		if ( (typeof obj[p] == "function" && obj.hasOwnProperty(p)) )
+		{
+			println(" -> "+p+": "+obj[p]); 
+		}
+	}
+
+	println("<b>Propriet\xE0 di ["+obj.constructor.name+"] non in costruttore</b>")
+	var propertyNames = Object.getOwnPropertyNames(Object.getPrototypeOf(obj));
+	for(var i=0;i<propertyNames.length;i++)
+	{
+		println(" -> "+propertyNames[i]); 
+	}
+	println("-------------------------------------------------");
+}
+
+

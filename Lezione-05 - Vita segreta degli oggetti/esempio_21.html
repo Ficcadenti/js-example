@@ -1,7 +1,7 @@
 <!--
 	# 
 	# MODULE DESCRIPTION:
-	# esempio_19.html
+	# esempio_21.html
 	# 
 	# 
 	# AUTHORS:
@@ -11,14 +11,14 @@
 	# 
 	# HISTORY:
 	# -[Date]-      -[Who]-               -[What]-
-	# 28-11-2016    Ficcadenti Raffaele         
+	# 30-11-2016    Ficcadenti Raffaele         
 	# -
 -->
 
 <hmtl>
 
 <head>
-	<title>sorgente: esempio_19.html</title>
+	<title>sorgente: esempio_21.html</title>
 	<!-- Sezione per i CSS -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
 </head>
@@ -38,24 +38,29 @@
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript">
 		infoBrowser();
-		capitolo("La vita segreta degli oggetti");
+		capitolo("Ancora sugli oggetti");
 		
-		paragrafo("ECMASript 6 - Definire un oggetto con la parola chiave 'class'");
-			class Persona3 
+		paragrafo("Serializzazione");
+			class Persona
 			{
-	 
 			    constructor(nome, cognome) 
 			    {
 			        this.nome = nome;
 			        this.cognome = cognome;
-			        this.email = "";
+			        this._email = "";
 			        this.indirizzo = "";
+			        this.mostraNomeCompleto = function() {return this.nome + " " + this.cognome;};
 			    } 
 			     
-			    mostraNomeCompleto() 
+			    nomeCompleto() 
 			    {
 			        return this.nome + " " + this.cognome;
 			    }
+
+			    getClassName() 
+			    {
+            		return Persona.name;
+        		}
 
 			    get email() 
 			    {
@@ -77,28 +82,37 @@
 
 			}
 
-			class programmatore3 extends Persona3 
+			class programmatore extends Persona
 			{
    
-			    constructor(nome, cognome) 
+			    constructor(nome, cognome)
 			    {
 			        super(nome, cognome);
 			        this.linguaggiConosciuti = []; 
 			    }
+
+			    getClassName() 
+			    {
+            		return programmatore.name;
+        		}
+        		pippo()
+        		{
+        			return "ciao";
+        		}
 			}
 
-			var grecoFrancesco=new Persona3("Francesco","Greco");
-			grecoFrancesco.email="greco.francesco@gmail.com";
-			stampaObj("grecoFrancesco",grecoFrancesco);
-			console.log(grecoFrancesco);
 
-			var p4=new programmatore3("Francesco","Greco");
-			p4.linguaggiConosciuti.push("Java");
-			stampaObj("p4",p4);
-			console.log(p4);			
+			var rf=new programmatore("Raffaele","Ficcadenti");
+			rf.email="raffaele.ficcadenti@gmail.com";
+			rf.linguaggiConosciuti.push("Java","c/c++","PHP","ECMAScript","Perl");
 
-		chiudiparagrafo();
-		paragrafo("Reflection");
+			console.log(rf.constructor);
+			stampaObj("rf",rf);
+			infoObj(rf);
+
+			var rf_json=JSON.stringify(rf);
+			println(rf_json);
+
 		chiudiparagrafo();
 
 	</script>
@@ -108,8 +122,9 @@
 		<h1>Info</h1>
 		<a href="http://www.w3schools.com/js/default.asp" target="_blank">w3schools<span class="dotcom">.com</span></a><br>
 		<a href="http://html5index.org/index.html" target="_blank">The HTML 5 JavaScript API Index</a><br>
-		<a href="./tab1.html" target="_blank">Descrittori delle propriet&agrave;</a><br>
-		<a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a>
+		<a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br>
+		<a href="http://jsonlint.com/" target="_blank">JSONLint</a>
+		
 	</div>
 
 </body>

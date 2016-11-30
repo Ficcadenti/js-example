@@ -80,8 +80,8 @@
 			raffaeleFiccadenti.telefono = "3404020010"; // proprietà solo di raffaeleFiccadenti
 			Persona.prototype.citta = "Roma"; // Proprietà di tutti gli oggetti Persona
 
-			stampaObj(marioRossi);
-			stampaObj(raffaeleFiccadenti);
+			stampaObj("marioRossi",marioRossi);
+			stampaObj("raffaeleFiccadenti",raffaeleFiccadenti);
 
 			console.log(marioRossi);
 			console.log(raffaeleFiccadenti);
@@ -252,7 +252,7 @@
 			}	
 
 
-			stampaObj(valeriaGreco);
+			stampaObj("valeriaGreco",valeriaGreco);
 			println("Nome completo = "+valeriaGreco.mostraNomeCompleto());
 			println("Contatto = "+valeriaGreco.contatto);
 			console.log(valeriaGreco);
@@ -302,6 +302,8 @@
 			var p3=new programmatore("Raffaele","Ficcadenti");
 
 			var p; 
+			infoObj(p3);
+			println("<b>Propriet\xE0 in p3</b>");
 			for (p in p3) 
 			{
 				//if(p3.hasOwnProperty(p))
@@ -317,7 +319,7 @@
 
 			println("email:"+p3.email);
 
-			stampaObj(p3);
+			stampaObj("p3",p3);
 			console.log("p3",p3);
 
 		chiudiparagrafo();

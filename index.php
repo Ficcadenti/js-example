@@ -102,7 +102,16 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_17.html" target="_blank">esempio_17.html</a></b>: Protptipi.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_18.html" target="_blank">esempio_18.html</a></b>: Costruttori.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_19.html" target="_blank">esempio_19.html</a></b>: ECMAScript 6 - Definire un oggetto con 'class'.</li>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_20.html" target="_blank">esempio_19.html</a></b>: Reflection.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_20.html" target="_blank">esempio_20.html</a></b>: Reflection.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_21.html" target="_blank">esempio_21.html</a></b>: Serializzare oggetti.</li>
+					<br>
+				</ul>
+			</li>
+
+			<li><strong>LEZIONE N. 6</strong> - Eccezioni.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccesioni/esempio_22.html" target="_blank">esempio_22.html</a></b>: Esempio.</li>
 					<br>
 				</ul>
 			</li>

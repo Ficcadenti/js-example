@@ -86,6 +86,15 @@ Raffaele.
 			<br>
 			<li><b>esempio_20.html</b>: Reflection.</li>
 			<br>
+			<li><b>esempio_20.html</b>: Serializzare oggetti.</li>
+			<br>
+		</ul>
+	</li>
+	<li><strong>LEZIONE N. 6</strong> - Eccezioni.
+		<ul>
+			<br>
+			<li><b>esempio_22.html</b>: Esempio.</li>
+			<br>
 		</ul>
 	</li>
 
