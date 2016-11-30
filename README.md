@@ -88,12 +88,14 @@ Raffaele.
 			<br>
 			<li><b>esempio_20.html</b>: Serializzare oggetti.</li>
 			<br>
+			<li><b>esempio_22.html</b>: Esercizi.</li>
+			<br>
 		</ul>
 	</li>
 	<li><strong>LEZIONE N. 6</strong> - Eccezioni.
 		<ul>
 			<br>
-			<li><b>esempio_22.html</b>: Esempio.</li>
+			<li><b>esempio_23.html</b>: Esempio.</li>
 			<br>
 		</ul>
 	</li>

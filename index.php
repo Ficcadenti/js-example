@@ -104,6 +104,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_19.html" target="_blank">esempio_19.html</a></b>: ECMAScript 6 - Definire un oggetto con 'class'.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_20.html" target="_blank">esempio_20.html</a></b>: Reflection.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_21.html" target="_blank">esempio_21.html</a></b>: Serializzare oggetti.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-05 - Vita segreta degli oggetti/esempio_22.html" target="_blank">esempio_22.html</a></b>: Esercizi.</li>
 					<br>
 				</ul>
 			</li>
@@ -111,7 +112,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 			<li><strong>LEZIONE N. 6</strong> - Eccezioni.
 				<ul>
 					<br>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccezioni/esempio_22.html" target="_blank">esempio_22.html</a></b>: Esempio.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccezioni/esempio_23.html" target="_blank">esempio_23.html</a></b>: Esempio.</li>
 					<br>
 				</ul>
 			</li>
