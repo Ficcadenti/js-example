@@ -111,7 +111,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 			<li><strong>LEZIONE N. 6</strong> - Eccezioni.
 				<ul>
 					<br>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccesioni/esempio_22.html" target="_blank">esempio_22.html</a></b>: Esempio.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccezioni/esempio_22.html" target="_blank">esempio_22.html</a></b>: Esempio.</li>
 					<br>
 				</ul>
 			</li>
