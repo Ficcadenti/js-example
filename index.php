@@ -117,6 +117,14 @@ http://www.w3.org/TR/html4/frameset.dtd>
 				</ul>
 			</li>
 
+			<li><strong>LEZIONE N. 7</strong> - Vita Elettronica.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-07 - Vita elettronica/esempio_24.html" target="_blank">esempio_24.html</a></b>: Esempio.</li>
+					<br>
+				</ul>
+			</li>
+
 		</ul>
 	</body>
 </html>

@@ -99,5 +99,12 @@ Raffaele.
 			<br>
 		</ul>
 	</li>
+	<li><strong>LEZIONE N. 7</strong> - Vita elettronica.
+		<ul>
+			<br>
+			<li><b>esempio_24.html</b>: Esempio.</li>
+			<br>
+		</ul>
+	</li>
 
 </ul>
