@@ -109,10 +109,11 @@ http://www.w3.org/TR/html4/frameset.dtd>
 				</ul>
 			</li>
 
-			<li><strong>LEZIONE N. 6</strong> - Eccezioni.
+			<li><strong>LEZIONE N. 6</strong> - Gestione degli errori.
 				<ul>
 					<br>
-					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Eccezioni/esempio_23.html" target="_blank">esempio_23.html</a></b>: Esempio.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23.html" target="_blank">esempio_23.html</a></b>: Eccezioni.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23a.html" target="_blank">esempio_23a.html</a></b>: Usiamo strict.</li>
 					<br>
 				</ul>
 			</li>

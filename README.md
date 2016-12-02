@@ -92,10 +92,12 @@ Raffaele.
 			<br>
 		</ul>
 	</li>
-	<li><strong>LEZIONE N. 6</strong> - Eccezioni.
+	<li><strong>LEZIONE N. 6</strong> - Gestione degli errori.
 		<ul>
 			<br>
-			<li><b>esempio_23.html</b>: Esempio.</li>
+			<li><b>esempio_23.html</b>: ccezioni.</li>
+			<br>
+			<li><b>esempio_23a.html</b>: Usiamo strict.</li>
 			<br>
 		</ul>
 	</li>
