@@ -95,7 +95,7 @@ Raffaele.
 	<li><strong>LEZIONE N. 6</strong> - Gestione degli errori.
 		<ul>
 			<br>
-			<li><b>esempio_23.html</b>: ccezioni.</li>
+			<li><b>esempio_23.html</b>: Eccezioni.</li>
 			<br>
 			<li><b>esempio_23a.html</b>: Usiamo strict.</li>
 			<br>
