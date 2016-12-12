@@ -99,6 +99,10 @@ Raffaele.
 			<br>
 			<li><b>esempio_23a.html</b>: Usiamo strict.</li>
 			<br>
+			<li><b>esempio_23b.html</b>: Asserzioni.</li>
+			<br>
+			<li><b>esempio_23c.html</b>: Esercizi.</li>
+			<br>
 		</ul>
 	</li>
 	<li><strong>LEZIONE N. 7</strong> - Vita elettronica.
@@ -108,5 +112,11 @@ Raffaele.
 			<br>
 		</ul>
 	</li>
-
+	<li><strong>LEZIONE N. 8</strong> - Espressioni regolari.
+		<ul>
+			<br>
+			<li><b>esempio_25.html</b>: Iniziamo.</li>
+			<br>
+		</ul>
+	</li>	
 </ul>

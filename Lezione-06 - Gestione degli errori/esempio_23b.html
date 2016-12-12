@@ -1,7 +1,7 @@
 <!--
 	# 
 	# MODULE DESCRIPTION:
-	# esempio_23.html
+	# esempio_23b.html
 	# 
 	# 
 	# AUTHORS:
@@ -18,7 +18,7 @@
 <hmtl>
 
 <head>
-	<title>sorgente: esempio_23.html</title>
+	<title>sorgente: esempio_23b.html</title>
 	<!-- Sezione per i CSS -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
 </head>
@@ -43,76 +43,19 @@
 		infoBrowser();
 		capitolo("Gestione degli errori");
 		
-		paragrafo("Eccezioni");
+		paragrafo("Asserzioni");
 			
-			var x = 0;
- 
-			try 
+			function lastElement(array) 
 			{
-			    func();
-			    x = x + 1;
-			} 
-			catch(e) 
-			{
-			    println(e.name+": "+e.message);  // func is not defined
-			} 
-			finally // questo blocco di codice viene comunque eseguito eccezione o meno :)
-			{
-			    x = x - 1;
-			}
-			println(x);  // -1
-
-
-
-			try 
-			{
-    			var x=null;
-    			x.email="usausays";
-			} 
-			catch(e) 
-			{
-				switch (e.name) 
-				{
-					case "ReferenceError":
-					{
-						println("Variabile o funzione non definita");
-					}break;
-					
-					case "TypeError":
-					{
-						println("Non \xE9 stato utilizzato il tipo di dato previsto");
-					}
-					break;
-				
-					default:
-					{
-						println(e.name+": "+e.message);	
-					}
-				}
+  				assert(array.length > 0, "Array vuoto in lastElement");
+  				return array[array.length - 1];
 			}
 
-			function convalidaEmail(value) 
-			{
-			    var emailRegExp = /\w+@\w+\.\w{2,4}/i;
-			 
-			    if (emailRegExp.test(value)) 
-			    {
-			        return true;
-			    } 
-			    else
-			    {
-			        throw new MyError("EmailError","Email non valida!");
-			    }
-			}
+			var arr=[1,2,3,4];
+			println("lastElement["+arr.join(";")+"]="+lastElement(arr));
 
-			try 
-			{
-				convalidaEmail("tsasyasua");
-			}
-			catch(e)
-			{
-				println(e.name+": "+e.message);
-				console.log(e);			}
+			var arr1=[];
+			println("lastElement["+arr1.join(";")+"]="+lastElement(arr1));
 
 		chiudiparagrafo();
 

@@ -114,6 +114,8 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23.html" target="_blank">esempio_23.html</a></b>: Eccezioni.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23a.html" target="_blank">esempio_23a.html</a></b>: Usiamo strict.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23b.html" target="_blank">esempio_23b.html</a></b>: Asserzioni.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-06 - Gestione degli errori/esempio_23c.html" target="_blank">esempio_23c.html</a></b>: Esercizi.</li>
 					<br>
 				</ul>
 			</li>
@@ -122,6 +124,14 @@ http://www.w3.org/TR/html4/frameset.dtd>
 				<ul>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-07 - Vita elettronica/esempio_24.html" target="_blank">esempio_24.html</a></b>: Esempio.</li>
+					<br>
+				</ul>
+			</li>
+
+			<li><strong>LEZIONE N. 8</strong> - Espressioni regolari.
+				<ul>
+					<br>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_25.html" target="_blank">esempio_25.html</a></b>: Iniziamo.</li>
 					<br>
 				</ul>
 			</li>
