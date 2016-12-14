@@ -132,6 +132,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 				<ul>
 					<br>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_25.html" target="_blank">esempio_25.html</a></b>: Iniziamo.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_26.html" target="_blank">esempio_26.html</a></b>: Modificatori.</li>
 					<br>
 				</ul>
 			</li>

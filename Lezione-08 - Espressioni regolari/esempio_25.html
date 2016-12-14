@@ -54,139 +54,141 @@
 		
 		paragrafo("Prove di corrispondenza");
 
-			var rx1=new RegExp("abc");
-			var rx2=/abc/;
+			var rx=new RegExp("abc");
+			
 
-			println("Espressione regolare <b>rx1="+rx1+"</b>");
-			println("Espressione regolare <b>rx2="+rx2+"</b>");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			rx=/abc/;
+
+			println("Espressione regolare <b>rx="+rx+"</b>");
 
 			var str="Raffaele";
-			println(str+" -> "+rx1.test(str));
+			println(str+" -> "+rx.test(str));
 			str="Raffaele abc Valeria";
-			println(str+" -> "+rx1.test(str));			
+			println(str+" -> "+rx.test(str));			
 			str="òlkaksakòasabcfdsfewr";
-			println(str+" -> "+rx2.test());	
+			println(str+" -> "+rx.test());	
 
 		chiudiparagrafo();
 
 		paragrafo("Trova serie di caratteri");	
-			var rx3=new RegExp("[0-9]");
-			println("Espressione regolare <b>rx3="+rx3+"</b>");
-			println(str+" -> "+rx3.test(str));		
+			rx=new RegExp("[0-9]");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			println(str+" -> "+rx.test(str));		
 			str="Raffaele 14/08/1976";
-			println(str+" -> "+rx3.test(str));	
+			println(str+" -> "+rx.test(str));	
 
 			println();
-			var rx4=new RegExp("\\d");
-			println("Espressione regolare <b>rx4="+rx4+"</b>");
-			println(str+" -> "+rx4.test(str));
+			rx=new RegExp("\\d");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			println(str+" -> "+rx.test(str));
 
 
 			println();
-			var rx5=new RegExp("\\d\\d-\\d\\d-\\d\\d\\d\\d \\d\\d:\\d\\d");
-			println("Espressione regolare <b>rx5="+rx5+"</b>");
-			println(str+" -> "+rx5.test(str));	
+			rx=new RegExp("\\d\\d-\\d\\d-\\d\\d\\d\\d \\d\\d:\\d\\d");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			println(str+" -> "+rx.test(str));	
 			str="Raffaele 14-08-1976 22:12";
-			println(str+" -> "+rx5.test(str));		
+			println(str+" -> "+rx.test(str));		
 
 			println();
-			var rx6=new RegExp("[^01]");
-			println("Espressione regolare <b>rx6="+rx6+"</b>");
+			rx=new RegExp("[^01]");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="0110010100110101";
-			println(str+" -> "+rx6.test(str));	
+			println(str+" -> "+rx.test(str));	
 			str="0110010120110101";
-			println(str+" -> "+rx6.test(str));		
+			println(str+" -> "+rx.test(str));		
 
 		chiudiparagrafo();
 
 		paragrafo("Ripetere parti di una stringa");	
 
-			var rx7=new RegExp("\\d+");
-			println("Espressione regolare <b>rx7="+rx7+"</b>");
+			rx=new RegExp("\\d+");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Raffaele 0110010100110101";
-			println(str+" -> "+rx7.test(str));	
+			println(str+" -> "+rx.test(str));	
 			str="Raffaele";
-			println(str+" -> "+rx7.test(str));	
+			println(str+" -> "+rx.test(str));	
 
 			println();
-			var rx8=new RegExp("\\d*");
-			println("Espressione regolare <b>rx8="+rx8+"</b>");
+			rx=new RegExp("\\d*");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Raffaele 0110010100110101";
-			println(str+" -> "+rx8.test(str));	
+			println(str+" -> "+rx.test(str));	
 			str="Raffaele";
-			println(str+" -> "+rx8.test(str));	
+			println(str+" -> "+rx.test(str));	
 
 			println();
-			var rx9=new RegExp("ciao?");
-			println("Espressione regolare <b>rx9="+rx9+"</b>");
+			rx=new RegExp("ciao?");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="ciao Raffaele";
-			println(str+" -> "+rx9.test(str));	
+			println(str+" -> "+rx.test(str));	
 			str="cia Raffaele";
-			println(str+" -> "+rx9.test(str));	
+			println(str+" -> "+rx.test(str));	
 			str="Raffaele";
-			println(str+" -> "+rx9.test(str));	
+			println(str+" -> "+rx.test(str));	
 
 			println();
-			var rx10=new RegExp("\\d{1,2}-\\d{1,2}-\\d{1,4} +\\d{1,2}:\\d{1,2}");
-			println("Espressione regolare <b>rx10="+rx10+"</b>");
-			println(str+" -> "+rx10.test(str));	
+			rx=new RegExp("\\d{1,2}-\\d{1,2}-\\d{1,4} +\\d{1,2}:\\d{1,2}");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			println(str+" -> "+rx.test(str));	
 			str="Raffaele   14-08-1976 22:12";
-			println(str+" -> "+rx10.test(str));		
+			println(str+" -> "+rx.test(str));		
 
 			println();
-			var rx11=new RegExp("\\d{2,}");
-			println("Espressione regolare <b>rx11="+rx11+"</b>");
+			rx=new RegExp("\\d{2,}");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Raffaele   14-08-1976 22:12";
-			println(str+" -> "+rx11.test(str));		
+			println(str+" -> "+rx.test(str));		
 
 		chiudiparagrafo();
 
 		paragrafo("Raggruppare le sottoespressioni");
 
-			var rx12=new RegExp("boo+(hoo+)+", "i");
-			println("Espressione regolare <b>rx12="+rx12+"</b>");
+			rx=new RegExp("boo+(hoo+)+", "i");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Boooooohoohooooohoooohoo";
-			println(str+" -> "+rx12.test(str));	
+			println(str+" -> "+rx.test(str));	
 
 		chiudiparagrafo();
 
 		paragrafo("Corrispondenze e gruppi");
-			var rx13=new RegExp("\\d{2,4}", "g");
-			println("Espressione regolare <b>rx13="+rx13+"</b>");
+			rx=new RegExp("\\d{2,4}", "g");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Raffaele 1234 456";
-			var match=rx13.exec(str);
+			var match=rx.exec(str);
 			println(str+" -> "+match);	
 			console.log(match);
 
 			str="Raffaele";
-			match=rx13.exec(str);
+			match=rx.exec(str);
 			println(str+" -> "+match);	
 
 
 			println();
-			var rx14=new RegExp("'([^']*)'", "g");
-			println("Espressione regolare <b>rx14="+rx14+"</b>");
+			rx=new RegExp("'([^']*)'", "g");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Ciao 'Raffaele'";
-			var match=rx14.exec(str);
+			var match=rx.exec(str);
 			println(str+" -> "+match);	
 			console.log(match);
 
 
 			println();
-			var rx15=new RegExp("(\\d)+");
-			println("Espressione regolare <b>rx15="+rx15+"</b>");
+			rx=new RegExp("(\\d)+");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="1234 2345 rfdsf";
-			var match=rx15.exec(str);
+			var match=rx.exec(str);
 			println(str+" -> "+match);	
 			console.log(match);
 
 
 			println();
-			var rx16=new RegExp("[a-z]+(ria)?","i");
-			println("Espressione regolare <b>rx16="+rx16+"</b>");
+			rx=new RegExp("[a-z]+(ria)?","i");
+			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Ciao Valeria";
-			println(str+" -> "+rx16.test(str));	
-			var match=rx16.exec(str);
+			println(str+" -> "+rx.test(str));	
+			var match=rx.exec(str);
 			println(str+" -> "+match);	
 			console.log(match);
 
@@ -220,7 +222,7 @@
 
 			function findDate(str)
 			{
-				var rx=new RegExp("(\\d{1,2})-(\\d{1,2})-(\\d{4})");
+				rx=new RegExp("(\\d{1,2})-(\\d{1,2})-(\\d{4})");
 				var match=rx.exec(str);
 				if(match!=null)
 				{
@@ -237,7 +239,7 @@
 
 		paragrafo("Confini di parola e di stringa");
 
-			var rx=new RegExp("\\bciao\\b","gi");
+			rx=new RegExp("\\bciao\\b","gi");
 			println("Espressione regolare <b>rx="+rx+"</b>");
 			str="Ciao Raffaele";
 			println(str+" -> "+rx.test(str));	

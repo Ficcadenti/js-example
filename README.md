@@ -117,6 +117,8 @@ Raffaele.
 			<br>
 			<li><b>esempio_25.html</b>: Iniziamo.</li>
 			<br>
+			<li><b>esempio_26.html</b>: Modificatori.</li>
+			<br>
 		</ul>
 	</li>	
 </ul>

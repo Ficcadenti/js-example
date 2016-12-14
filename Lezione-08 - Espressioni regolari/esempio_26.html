@@ -52,10 +52,105 @@
 
 		capitolo("Espressioni regolari");
 		
-		paragrafo("Iniziamo");
+		paragrafo("Modificatori");
 
+			var rx=new RegExp("ciao","i");
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Ciao Raffaele";
+			println(str+" -> "+rx.test(str));	
+
+			console.log("i",rx.ignoreCase);
+			console.log("g",rx.global);
+			console.log("m",rx.multiline);
+
+		chiudiparagrafo();
+
+		paragrafo("Exec");
 		
+			rx=/\d/g;
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Raff1ele2 ciao3";
+			var result=rx.exec(str);
+			console.log(result);
+			while(result!=null)
+			{
+				println(str+" -> "+result+", lastIndex="+rx.lastIndex+", index="+result.index);
+				result=rx.exec(str);
+			}
 
+		chiudiparagrafo();
+
+		paragrafo("Stringhe: search, replace, split e match");
+			
+			rx=/icca/gi;
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Raffaele Ficcadenti";
+			var result=str.search(rx);
+			println(str+" index="+result);
+
+			rx=/ /gi;
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Raffaele Ficcadenti raffaele.ficcadenti@gmail.com";
+			var result=str.split(rx);
+			println(str+" :"+result);
+
+			rx=/ /gi;
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Raffaele Ficcadenti raffaele.ficcadenti@gmail.com";
+			var result=str.replace(rx,"[spazio]");
+			println(str+"  ----> "+result);
+
+
+			rx=/[A-z]+/gi;
+			println("Espressione regolare <b>rx="+rx+"</b>");
+			var str="Raffaele Ficcadenti raffaele.ficcadenti@gmail.com";
+			var result=str.match(rx);
+			println(str+" :"+result);
+
+
+		chiudiparagrafo();
+			
+		paragrafo("Codice fiscale");
+			var codiceFiscale = /\b[a-z]{6}\d{2}[abcdehlmprst]\d{2}[a-z]\d{3}[a-z]/i;
+			var cf="FCCRFL76M14H501C";
+
+			if(codiceFiscale.test(cf))
+			{
+				println("il codice fiscale '"+cf+"' &egrave; valido");
+			}
+			else
+			{
+				println("il codice fiscale '"+cf+"' non &egrave; valido");
+			}
+
+		chiudiparagrafo();
+
+		paragrafo("e-mail");
+			var email = /\w+@\w+\.\w{2,4}/i
+			var em="raffaele.ficcadenti@gmail.com";
+
+			if(email.test(em))
+			{
+				println("l'e-mail '"+em+"' &egrave; valida");
+			}
+			else
+			{
+				println("l'e-mail '"+em+"' non &egrave; valida");
+			}
+		chiudiparagrafo();
+
+		paragrafo("Indirizzo IP");
+			var ip = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/
+			var valore="168.234.123.1";
+
+			if(ip.test(valore))
+			{
+				println("IP '"+valore+"' &egrave; valido");
+			}
+			else
+			{
+				println("IP '"+valore+"' non &egrave; valido");
+			}
 		chiudiparagrafo();
 		
 	</script>
