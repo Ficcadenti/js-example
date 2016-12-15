@@ -119,6 +119,8 @@ Raffaele.
 			<br>
 			<li><b>esempio_26.html</b>: Modificatori.</li>
 			<br>
+			<li><b>esempio_27.html</b>: Analizzare un file INI.</li>
+			<br>
 		</ul>
 	</li>	
 </ul>
