@@ -121,6 +121,8 @@ Raffaele.
 			<br>
 			<li><b>esempio_27.html</b>: Analizzare un file INI.</li>
 			<br>
+			<li><b>esempio_28.html</b>: Esercizi.</li>
+			<br>
 		</ul>
 	</li>	
 </ul>

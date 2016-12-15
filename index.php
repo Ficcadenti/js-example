@@ -134,6 +134,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_25.html" target="_blank">esempio_25.html</a></b>: Iniziamo.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_26.html" target="_blank">esempio_26.html</a></b>: Modificatori.</li>
 					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_27.html" target="_blank">esempio_27.html</a></b>: Analizzare un file INI.</li>
+					<li><b><a href="<?php echo $path_sviluppo?>Lezione-08 - Espressioni regolari/esempio_28.html" target="_blank">esempio_28.html</a></b>: Esercizi.</li>
 					<br>
 				</ul>
 			</li>

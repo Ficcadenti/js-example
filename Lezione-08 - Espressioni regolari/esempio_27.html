@@ -1,7 +1,7 @@
 <!--
 	# 
 	# MODULE DESCRIPTION:
-	# esempio_26.html
+	# esempio_27.html
 	# 
 	# 
 	# AUTHORS:
@@ -18,7 +18,7 @@
 <hmtl>
 
 <head>
-	<title>sorgente: esempio_26.html</title>
+	<title>sorgente: esempio_27.html</title>
 	<!-- Sezione per i CSS -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
 </head>
@@ -89,12 +89,33 @@
 
 		try 
 		{
-			console.log(parseINI(fileINI));
+			var obj=parseINI(fileINI);
+			
+
+			console.log(obj);
+			for(var i=0;i<obj.length;i++)
+			{
+				if(obj[i].nome!=null)
+				{
+					println("["+obj[i].nome.toUpperCase()+"]");
+				}
+				else
+				{
+					println("[GLOBAL]");	
+				}
+				for(var j=0;j<obj[i].campi.length;j++)
+				{
+					var tmp=obj[i].campi[j];
+					println(tmp.nome+" = "+tmp.campi);
+				}
+			}
 		}
 		catch(e) 
 		{
 			console.log(e);
 		}
+
+
 
 
 		chiudiparagrafo();
