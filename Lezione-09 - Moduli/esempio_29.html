@@ -29,9 +29,19 @@
 			"Un programmatore principiante scrive programmi come una formica<br>
 			costruisce il formicaio, un pezzo per volta, senza pensare alla struttura<br>
 			pi&ugrave; grande. I suoi programmi saranno come castelli di sabbia. Per un p&ograve;"<br>
+			staranno in piedi, ma se crescono ancora finiranno per crollare.<br>
+			<br>
+			Quando si rende conto di questo problema, il programmatore passer&agrave; un<br>
+			sacco di tempo a pensare alla struttura. I suoi programmi avranno una<br>
+			struttura rigida, come sculture nella roccia. Sono solidi, ma quando bisogna<br>
+			modificarli, sar&agrave; necessario usare la violenza.<br>
+			<br>
+			Il programmatore esperto sa quando applicare strutture e quando lasciare<br>
+			le cose nella loro forma pi&ugrave; semplice. I suoi programmi sono come creta<br>
+			solidi ma malleabili.<br>
 		</i>
 		<br>
-		<strong>Joe Armstrong</strong><i> intervistato su Coders at Work</i>
+		<strong>Jamie Zawinski</strong>
 	</p>
 	<hr>
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
@@ -43,8 +53,72 @@
 
 		capitolo("Moduli");
 
-		paragrafo("Esempio");
+		paragrafo("Spazio dei nomi.");
 
+		var names = ["Lunedi", "Martedi", "Mercoledi", "Giovedi","Venerdi", "Sabato", "Domenica"];
+		
+		function dayName(number) 
+		{
+  			return names[number];
+		}
+
+		var dayName1 = function() 
+		{
+			var names = ["Lunedi", "Martedi", "Mercoledi", "Giovedi","Venerdi", "Sabato", "Domenica"];
+			return function(number) 
+			{
+				return names[number];
+			};
+		}();
+
+		println(dayName(0));
+		
+		println(dayName1(0));
+
+		(function() 
+			{
+	  			function square(x) { return x * x; }
+	  			var hundred = 100;
+				println(square(hundred));
+			}
+		)();
+
+		var weekDay = function() 
+		{
+			var names = ["Lunedi", "Martedi", "Mercoledi", "Giovedi","Venerdi", "Sabato", "Domenica"];
+			return {
+					name: function(number) { return names[number]; },
+					number: function(name) { return names.indexOf(name); }
+				};
+		}();
+
+		println(weekDay.number("Mercoledi"));
+		println(weekDay.name(weekDay.number("Mercoledi")));
+
+
+		var f=function(exports) 
+		{
+		  var names = ["Lunedi", "Martedi", "Mercoledi", "Giovedi","Venerdi", "Sabato", "Domenica"];
+
+		  exports.name = function(number) {
+		    return names[number];
+		  };
+		  exports.number = function(name) {
+		    return names.indexOf(name);
+		  };
+		}(this.weekDay1={});
+
+		
+		println(weekDay1.number("Mercoledi"));
+		println(weekDay1.name(weekDay1.number("Mercoledi")));
+
+		var f1=function(x)
+		{
+			var names = ["Lunedi", "Martedi", "Mercoledi", "Giovedi","Venerdi", "Sabato", "Domenica"];
+			return 1;
+		}(this.weekDay2={});
+
+		console.log(f1);
 
 		chiudiparagrafo();		
 	</script>
