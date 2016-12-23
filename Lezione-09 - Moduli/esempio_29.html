@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 	# 
 	# MODULE DESCRIPTION:
@@ -18,32 +19,37 @@
 <hmtl>
 
 <head>
+	<meta charset="UTF-8">
 	<title>sorgente: esempio_29.html</title>
 	<!-- Sezione per i CSS -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
 </head>
 
-<body>	
+<header>
 	<p>
 		<i>
 			"Un programmatore principiante scrive programmi come una formica<br>
 			costruisce il formicaio, un pezzo per volta, senza pensare alla struttura<br>
-			pi&ugrave; grande. I suoi programmi saranno come castelli di sabbia. Per un p&ograve;"<br>
+			più; grande. I suoi programmi saranno come castelli di sabbia. Per un pò"<br>
 			staranno in piedi, ma se crescono ancora finiranno per crollare.<br>
 			<br>
-			Quando si rende conto di questo problema, il programmatore passer&agrave; un<br>
+			Quando si rende conto di questo problema, il programmatore passerà un<br>
 			sacco di tempo a pensare alla struttura. I suoi programmi avranno una<br>
 			struttura rigida, come sculture nella roccia. Sono solidi, ma quando bisogna<br>
-			modificarli, sar&agrave; necessario usare la violenza.<br>
+			modificarli, sarà; necessario usare la violenza.<br>
 			<br>
 			Il programmatore esperto sa quando applicare strutture e quando lasciare<br>
-			le cose nella loro forma pi&ugrave; semplice. I suoi programmi sono come creta<br>
+			le cose nella loro forma più semplice. I suoi programmi sono come creta<br>
 			solidi ma malleabili.<br>
 		</i>
 		<br>
 		<strong>Jamie Zawinski</strong>
 	</p>
 	<hr>
+</header>
+
+
+<body>	
 	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
 	<script type="application/x-javascript" src="../assets/lib/my_vector.js"></script>
 	<script type="application/x-javascript" src="../assets/lib/modernizr-custom.js"></script>
@@ -55,11 +61,19 @@
 
 		if (Modernizr.video) 
 		{
-			println("<h2>video supportato</h2>");
+			println("video supportato");
 		}
 		else 
 		{
-			println("<h2>Mancato supporto: applicazione di strategie alternative</h2>");
+			println("Mancato supporto: applicazione di strategie alternative");
+		}
+
+		if (Modernizr.canvas) 
+		{
+			println("canvas supportato");
+		} else 
+		{
+			println("canvas NON supportato");
 		}
 
 		capitolo("Moduli");
@@ -140,16 +154,20 @@
 
 		chiudiparagrafo();		
 	</script>
+</body>
 
-	<hr>
-	<div id="info">
+<footer>
+	<nav>
+		<hr>
 		<h1>Info</h1>
-		<a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">w3schools<span class="dotcom">.com</span> - JavaScript RegExp Reference</a><br>
-		<a href="http://html5index.org/index.html" target="_blank">The HTML 5 JavaScript API Index</a><br>
-		<a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br>
-		<a href="https://regex101.com/" target="_blank">Regular expression</a><br>
-		
-	</div>
+		<ul>
+			<li><a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">w3schools<span class="dotcom">.com</span> - JavaScript RegExp Reference</a><br></li>
+			<li><a href="http://html5index.org/index.html" target="_blank">The HTML 5 JavaScript API Index</a><br></li>
+			<li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br></li>
+			<li><a href="https://regex101.com/" target="_blank">Regular expression</a><br></li>
+		</ul>
+	</nav>
+</footer>
 
 </body>
 </hmtl>
