@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+	# 
+	# MODULE DESCRIPTION:
+	# esempio_01.html
+	# 
+	# 
+	# AUTHORS:
+	# Author Name		Raffaele Ficcadenti
+	# Author email		raffaele.ficcadenti@gmail.com
+	# 
+	# 
+	# HISTORY:
+	# -[Date]-      -[Who]-               -[What]-
+	# 01-03-2017    Ficcadenti Raffaele         
+	# -
+-->
+
+<hmtl>
+
+<head>
+	<meta charset="UTF-8">
+	<title>sorgente: esempio_01.html</title>
+	<!-- Sezione per i CSS -->
+	<link rel="stylesheet" type="text/css" href="../../assets/css/default.css">
+</head>
+
+<header>
+	<p>
+		<i>
+			Angular/JS - Il Framework.<br>
+		</i>
+	</p>
+	<hr>
+</header>
+
+
+<body>	
+	<script type="application/x-javascript" src="../../assets/lib/my_scripts.js"></script>
+	<script type="application/x-javascript" src="../../assets/lib/my_vector.js"></script>
+	<script type="application/x-javascript" src="../../assets/lib/modernizr-custom.js"></script>
+	<script type="text/javascript">
+		//"use strict";
+		infoBrowser();
+
+		console.log( Modernizr );
+
+		if (Modernizr.video) 
+		{
+			println("video supportato");
+		}
+		else 
+		{
+			println("Mancato supporto: applicazione di strategie alternative");
+		}
+
+		if (Modernizr.canvas) 
+		{
+			println("canvas supportato");
+		} else 
+		{
+			println("canvas NON supportato");
+		}
+
+		capitolo("Angualr/JS");
+
+
+		chiudiparagrafo();
+	
+	</script>
+
+</body>
+
+<footer>
+	<nav>
+		<hr>
+		<h1>Info</h1>
+		<ul>
+			<li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br></li>
+		</ul>
+	</nav>
+</footer>
+
+</body>
+</hmtl>
