@@ -16,68 +16,38 @@
 	# -
 -->
 
-<hmtl>
+<hmtl ng-app ng-controller="AppCtrl">
 
 <head>
 	<meta charset="UTF-8">
 	<title>sorgente: esempio_01.html</title>
 	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="../../assets/css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="application/x-javascript" src="js/angular.min.js"></script>
+	<script type="application/x-javascript" src="js/controller.js"></script>
 </head>
 
-<header>
-	<p>
-		<i>
-			Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni.<br>
-		</i>
-		<br>
-		<strong>Documentazione ufficiale</strong>
-	</p>
-	<hr>
-</header>
 
+<body>
 
-<body>	
-	<script type="application/x-javascript" src="../../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript" src="../../assets/lib/my_vector.js"></script>
-	<script type="application/x-javascript" src="../../assets/lib/modernizr-custom.js"></script>
-	<script type="application/x-javascript" src="../../assets/angular/angular.min.js"></script>
-	<script type="text/javascript">
-		//"use strict";
-		infoBrowser();
+    <div class="container">
 
-		console.log( Modernizr );
+		<div class="page-header">
+		    <p>
+				<i>
+					"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
+				</i>
+				<br>
+				<strong>Documentazione ufficiale</strong>
+			</p>
+		</div>
 
-		if (Modernizr.video) 
-		{
-			println("video supportato");
-		}
-		else 
-		{
-			println("Mancato supporto: applicazione di strategie alternative");
-		}
-
-		if (Modernizr.canvas) 
-		{
-			println("canvas supportato");
-		} else 
-		{
-			println("canvas NON supportato");
-		}
-
-		capitolo("Angualr/JS");
-
-
-		chiudiparagrafo();
-	
-	</script>
-
-	<h1>Ciao Angular</h1>
-     
-    <div ng-app>
-        <p>Inserisci il tuo nome: <input type="text" ng-model="name"></p>
-        <p>Ciao {{name}}!</p>
-    </div>
+	    <div class="jumbotron">
+	   		<h1>Ciao {{name}}</h1>
+	        <label for="name">Inserisci il tuo nome</label>
+	        <input type="text" ng-model="name" class="form-control input-lg">
+	    </div>
+	</div>
 
 </body>
 
@@ -91,5 +61,4 @@
 	</nav>
 </footer>
 
-</body>
 </hmtl>
