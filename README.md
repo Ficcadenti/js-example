@@ -140,6 +140,8 @@ Raffaele.
 					<br>
 					<li><b>esempio_01.html</b>: Introduzione.</li>
 					<br>
+					<li><b>esempio_02.html</b>: Scaffolding.</li>
+					<br>
 				</ul>
 			</li>
 		</ul>
