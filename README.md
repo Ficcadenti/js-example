@@ -144,6 +144,8 @@ Raffaele.
 					<br>
 					<li><b>esempio_03.html</b>: Direttive.</li>
 					<br>
+					<li><b>esempio_04.html</b>: Filtri.</li>
+					<br>
 				</ul>
 			</li>
 		</ul>

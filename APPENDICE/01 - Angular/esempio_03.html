@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+	# 
+	# MODULE DESCRIPTION:
+	# esempio_03.html
+	# 
+	# 
+	# AUTHORS:
+	# Author Name		Raffaele Ficcadenti
+	# Author email		raffaele.ficcadenti@gmail.com
+	# 
+	# 
+	# HISTORY:
+	# 02-04-2017    Ficcadenti Raffaele         
+	# -
+-->
+
+<hmtl ng-app ng-controller="AppCtrl">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>sorgente: esempio_03.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/myApp.css">
+
+		<!-- Sezione per i JS -->
+		<script type="application/x-javascript" src="assets/js/jquery.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/angular.min.js"></script>
+
+		<!-- Sezione per i controller angular -->
+		<script type="application/x-javascript" src="assets/js/controller_es03.js"></script>
+	</head>
+
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+                <span class="sr-only">Toggle navigation</span>
+		      	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/">Contacts Manager</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="nav-toggle">
+		    <ul class="nav navbar-nav">
+		    	<li class="active"><a href="/">Browse</a></li>
+		    	<li><a href="/add">Add Contacts</a></li>
+		    </ul>
+		    <form class="navbar-form navbar-right" role="search">
+		    	<input type="text" class="form-control" placeholder="Search">
+		    </form>
+		    </div>
+		</nav>
+
+	    <div class="container">
+
+			<div class="page-header">
+			    <p>
+					<i>
+						"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
+					</i>
+					<br>
+					<strong>Documentazione ufficiale</strong>
+				</p>
+			</div>
+
+	       	<div class="jumbotron">
+	       		<h1>Ciao </h1>
+			    <p>Nome: <input type="text" ng-model="nome"></p>
+			    <p>Cognome: <input type="text" ng-model="cognome"></p>
+			</div>
+
+		</div>
+
+		
+	    <div class="row">
+	        <div class="col-sm-8">
+	            <div class="row">
+	                <div class="col-sm-6">
+	                    <p>6 colonne...</p>
+	                </div>
+	                <div class="col-sm-6">
+	                    <p>6 colonne...</p>
+	                </div>
+	            </div>
+
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <button class="btn btn-success" ng-click="clickHandler()">Premi il bottone!!!</button>
+
+	                    <div ng-if="isHidden">
+	                        Click the button above to toggle.
+	                    </div>
+
+	                    <ul>
+	                        <li ng-cloak ng-repeat="contact in contacts">
+	                            {{contact.name}} - {{contact.phone}}
+	                        </li>
+	                    </ul>
+
+	                    <label><input type="checkbox" ng-model="center"> text-center</label>
+	                    <label><input type="checkbox" ng-model="error"> text-danger</label>
+	                    <label><input type="checkbox" ng-model="styler"> ng-style</label>
+
+	                    <p ng-class="{'text-center': center, 'text-danger': error}" ng-style="styleDemo()">
+	                        Lorem ipsum dolor sit amet
+	                    </p>
+
+	                    <div ng-cloak ng-init="test = 'Hello, World'"></div>
+                   		test={{test}}
+
+	                </div>
+	            </div>
+
+	        </div>
+	        <div class="col-sm-4">
+	            Here is our sidebar
+	        </div>
+	    </div>
+
+		<footer class="navbar-fixed-bottom navbar-inverse">
+            <div class="container">
+                <nav class="nav navbar-nav">
+                    <h1 class="color_white">Info</h1>
+                    <ul>
+                        <li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a></li>
+                        <li><a href="https://www.w3schools.com/angular/default.asp" target="_blank">w3schools<span class="dotcom">.com</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+		</footer>
+
+	</body>
+
+</hmtl>
