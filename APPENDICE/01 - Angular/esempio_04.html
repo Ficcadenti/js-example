@@ -37,7 +37,7 @@
 	<body>
 
 		
-	    <div class="container">
+	    <div ng-cloak class="container">
 
 			<div class="page-header">
 			    <p>
@@ -49,11 +49,19 @@
 				</p>
 			</div>
 
-	       	<div ng-cloak class="jumbotron">
+	       	<div class="jumbotron">
 	       		<h1>{{config.appname}} </h1>
 			</div>
 
+
+			<label>{{1234567 | currency}}</label>
+			<br>
+			<label>{{1234567 | currency:'euro'}}</label>
+			<br>
+			<label>{{1234567.245 | number:2}}</label>
+			<br>
 		</div>
+
 
 
 		<footer class="navbar-fixed-bottom navbar-inverse">
