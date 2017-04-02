@@ -1,0 +1,24 @@
+body /* TAG */
+{ 
+	padding-top: 70px; 
+	padding-bottom: 170px; 
+}
+
+.floating-box /* classe */
+{
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 2px solid #73AD21;  
+}
+
+.color_white /* classe */
+{
+	color: white;
+}
+
+.dotcom /* classe */
+{
+	color:#4CAF50
+}

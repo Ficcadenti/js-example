@@ -18,47 +18,49 @@
 
 <hmtl ng-app ng-controller="AppCtrl">
 
-<head>
-	<meta charset="UTF-8">
-	<title>sorgente: esempio_01.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<script type="application/x-javascript" src="assets/js/angular.min.js"></script>
-	<script type="application/x-javascript" src="assets/js/controller.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>sorgente: esempio_01.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<script type="application/x-javascript" src="assets/js/angular.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/controller.js"></script>
+	</head>
 
 
-<body>
+	<body>
 
-    <div class="container">
+	    <div class="container">
 
-		<div class="page-header">
-		    <p>
-				<i>
-					"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
-				</i>
-				<br>
-				<strong>Documentazione ufficiale</strong>
-			</p>
+			<div class="page-header">
+			    <p>
+					<i>
+						"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
+					</i>
+					<br>
+					<strong>Documentazione ufficiale</strong>
+				</p>
+			</div>
+
+		    <div class="jumbotron">
+		   		<h1>Ciao {{name}}</h1>
+		        <label for="name">Inserisci il tuo nome</label>
+		        <input type="text" ng-model="name" class="form-control input-lg" id="name">
+		    </div>
 		</div>
 
-	    <div class="jumbotron">
-	   		<h1>Ciao {{name}}</h1>
-	        <label for="name">Inserisci il tuo nome</label>
-	        <input type="text" ng-model="name" class="form-control input-lg" id="name">
-	    </div>
-	</div>
+		<footer>
+			<nav>
+				<hr>
+				<h1>Info</h1>
+				<ul>
+					<li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br></li>
+				</ul>
+			</nav>
+		</footer>
 
-</body>
+	</body>
 
-<footer>
-	<nav>
-		<hr>
-		<h1>Info</h1>
-		<ul>
-			<li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br></li>
-		</ul>
-	</nav>
-</footer>
+
 
 </hmtl>

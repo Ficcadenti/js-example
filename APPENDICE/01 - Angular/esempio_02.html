@@ -16,66 +16,172 @@
 	# -
 -->
 
-<hmtl ng-app ng-controller="AppCtrl">
+<hmtl ng-app="myApp">
 
-<head>
-	<meta charset="UTF-8">
-	<title>sorgente: esempio_02.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<script type="application/x-javascript" src="assets/js/jquery.min.js"></script>
-	<script type="application/x-javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="application/x-javascript" src="assets/js/angular.min.js"></script>
-	<script type="application/x-javascript" src="assets/js/controller.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>sorgente: esempio_02.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/myApp.css">
+
+		<!-- Sezione per i JS -->
+		<script type="application/x-javascript" src="assets/js/jquery.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/angular.min.js"></script>
+		<script type="application/x-javascript" src="assets/js/myApp.js"></script>
+	</head>
 
 
-<body>
+	<body>
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
-      	<span class="icon-bar"></span>
-      	<span class="icon-bar"></span>
-      	<span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Contacts Manager</a>
-    </div>
-    <div class="collapse navbar-collapse" id="nav-toggle">
-    <ul class="nav navbar-nav">
-    	<li class="active"><a href="/">Browse</a></li>
-    	<li><a href="/add">Add Contacts</a></li>
-    </ul>
-    <form class="navbar-form navbar-right" role="search">
-    	<input type="text" class="from-control" placeholder="Search">
-    </form>
-    </div>
-</nav>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+                <span class="sr-only">Toggle navigation</span>
+		      	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+		      	<span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/">Contacts Manager</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="nav-toggle">
+		    <ul class="nav navbar-nav">
+		    	<li class="active"><a href="/">Browse</a></li>
+		    	<li><a href="/add">Add Contacts</a></li>
+		    </ul>
+		    <form class="navbar-form navbar-right" role="search">
+		    	<input type="text" class="form-control" placeholder="Search">
+		    </form>
+		    </div>
+		</nav>
 
-    <div class="container">
+	    <div class="container">
 
-		<div class="page-header">
-		    <p>
-				<i>
-					"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
-				</i>
-				<br>
-				<strong>Documentazione ufficiale</strong>
-			</p>
+			<div class="page-header">
+			    <p>
+					<i>
+						"Angular è quello che HTML avrebbe dovuto essere se fosse stato progettato per sviluppare applicazioni."<br>
+					</i>
+					<br>
+					<strong>Documentazione ufficiale</strong>
+				</p>
+			</div>
+
+	       	<div class="jumbotron" ng-controller="userController">
+	       		<h1>Ciao</h1>
+			    <p>Nome: <input type="text" ng-model="nome"></p>
+			    <p>Cognome: <input type="text" ng-model="cognome"></p>
+			</div>
+
 		</div>
 
-	</div>
+		<h2>Utilizzo di inline-block (con CSS)</h2>
 
-</body>
+		<div class="floating-box">Floating box1</div>
+		<div class="floating-box">Floating box2</div>
+		<div class="floating-box">Floating box3</div>
+		<div class="floating-box">Floating box4</div>
+		<div class="floating-box">Floating box5</div>
+		<div class="floating-box">Floating box6</div>
+		<div class="floating-box">Floating box7</div>
+		<div class="floating-box">Floating box8</div>
 
-<footer>
-	<nav>
-		<hr>
-		<h1>Info</h1>
-		<ul>
-			<li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a><br></li>
-		</ul>
-	</nav>
-</footer>
+		<div class="container"> 
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="pull-left">
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me1</button>
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me2</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="pull-right">
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me1</button>
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me2</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="center-block col-sm-4" style="float: none; background-color: grey">
+					<button ng-click="clickHandler()" ng-class="btnClass">Click Me1</button>
+					<button ng-click="clickHandler()" ng-class="btnClass">Click Me2</button>
+				</div>
+			</div>
+
+			<div class="row show">
+				<div class="col-sm-12">
+					<div class="center-block" style="background-color:yellow;width:200px;">
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me1</button>
+						<button ng-click="clickHandler()" ng-class="btnClass">Click Me2</button>
+					</div>
+				</div>
+			</div>
+
+		    <hr>
+		    <div class="row">
+		        <div class="col-sm-8">
+		            <div class="row">
+		                <div class="col-sm-6">
+		                    <p>6 colonne...</p>
+		                </div>
+		                <div class="col-sm-6">
+		                    <p>6 colonne...</p>
+		                </div>
+		            </div>
+
+		            <div class="row">
+		                <div class="col-sm-12">
+		                    <button ng-click="clickHandler()" ng-class="btnClass">Click Me</button>
+
+		                    <div ng-hide="isHidden">
+		                        Click the button above to toggle.
+		                    </div>
+
+		                    <ul>
+		                        <li ng-repeat="contact in contacts">
+		                            {{contact.name}} - {{contact.phone}}
+		                        </li>
+		                    </ul>
+
+		                    <label><input type="checkbox" ng-model="center"> text-center</label>
+		                    <label><input type="checkbox" ng-model="error"> text-danger</label>
+		                    <label><input type="checkbox" ng-model="styler"> ng-style</label>
+
+		                    <p ng-class="{'text-center': center, 'text-danger': error}" ng-style="styleDemo()">
+		                        Lorem ipsum dolor sit amet
+		                    </p>
+
+		                    <div ng-init="test = 'Hello, World'"></div>
+		                    {{test}}
+
+		                </div>
+		            </div>
+
+		        </div>
+		        <div class="col-sm-4">
+		            Here is our sidebar
+		        </div>
+		    </div>
+		</div>
+
+		<footer class="navbar-fixed-bottom navbar-inverse">
+            <div class="container">
+                <nav class="nav navbar-nav">
+                    <h1 class="color_white">Info</h1>
+                    <ul>
+                        <li><a href="http://es6-features.org/#Constants" target="_blank">ECMAScript 6</a></li>
+                        <li><a href="https://www.w3schools.com/angular/default.asp" target="_blank">w3schools<span class="dotcom">.com</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+		</footer>
+
+	</body>
 
 </hmtl>
