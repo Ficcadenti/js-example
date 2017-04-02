@@ -1,8 +1,6 @@
-angular.module("myApp", []);
-
 angular.module("myApp", [])
     .controller("userController", 
         function($scope) {
-            $scope.nome = "Raffaele";
-            $scope.cognome = "Ficcadenti";
+            $scope.nome = "Valeria";
+            $scope.cognome = "Greco";
     });

@@ -1,3 +1,3 @@
 function AppCtrl($scope){
-  $scope.name = "Mondo";
+  $scope.name = "Mondo Angulare & Bootstrap";
 }
