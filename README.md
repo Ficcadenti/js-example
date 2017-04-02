@@ -142,6 +142,8 @@ Raffaele.
 					<br>
 					<li><b>esempio_02.html</b>: Scaffolding.</li>
 					<br>
+					<li><b>esempio_03.html</b>: Direttive.</li>
+					<br>
 				</ul>
 			</li>
 		</ul>

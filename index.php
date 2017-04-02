@@ -173,6 +173,7 @@ http://www.w3.org/TR/html4/frameset.dtd>
 							<br>
 							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/01 - Angular/esempio_01.html" target="_blank">esempio_01.html</a></b>: Introduzione.</li>
 							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/01 - Angular/esempio_02.html" target="_blank">esempio_02.html</a></b>: Scaffolding.</li>
+							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/01 - Angular/esempio_03.html" target="_blank">esempio_03.html</a></b>: Direttive.</li>
 							<br>
 						</ul>
 					</li>
