@@ -60,6 +60,23 @@
 			<br>
 			<label>{{1234567.245 | number:2}}</label>
 			<br>
+			<label>{{'Raffaele' | lowercase}}</label>
+			<br>
+			<label>{{'Raffaele' | uppercase}}</label>
+			<br>
+			<label>{{'Raffaele' | limitTo:5}}</label>
+			<br>
+			<label>{{743634345436 | date:'dd/MM/yyyy'}}</label>
+			<br>
+ 
+			<input type="text" ng-model="search">
+			<ul>
+                <li ng-cloak ng-repeat="missione in missioni | filter:{'nome': search} | orderBy:'lancio':false ">
+                    {{missione.nome}} - {{missione.lancio | date:'medium' }}
+                </li>
+            </ul>
+
+            <pre>{{missioni | json : 6}}</pre>
 		</div>
 
 
