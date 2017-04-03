@@ -15,7 +15,7 @@
 	# -
 -->
 
-<hmtl ng-app ng-controller="AppCtrl">
+<html lang="en" ng-app="contactsMgr" ng-controller="AppCtl">s
 
 	<head>
 		<meta charset="UTF-8">
@@ -53,22 +53,35 @@
 	       		<h1>{{config.appname}} </h1>
 			</div>
 
+			<h3>Currency</h3>
+			{{1234567 | currency}}
+			<br>
 
-			<label>{{1234567 | currency}}</label>
+			<h3>Currency</h3>
+			{{1234567 | currency:'euro'}}
 			<br>
-			<label>{{1234567 | currency:'euro'}}</label>
+
+			<h3>Number</h3>
+			{{1234567.245 | number:2}}
 			<br>
-			<label>{{1234567.245 | number:2}}</label>
+
+			<h3>lowercase</h3>
+			{{'Raffaele' | lowercase}}
 			<br>
-			<label>{{'Raffaele' | lowercase}}</label>
+
+			<h3>uppercase</h3>
+			{{'Raffaele' | uppercase}}
 			<br>
-			<label>{{'Raffaele' | uppercase}}</label>
+
+			<h3>limitTo</h3>
+			{{'Raffaele' | limitTo:5}}
 			<br>
-			<label>{{'Raffaele' | limitTo:5}}</label>
-			<br>
+
+			<h3>date</h3>
 			<label>{{743634345436 | date:'dd/MM/yyyy'}}</label>
 			<br>
  
+ 			<h3>Filter</h3>
 			<input type="text" ng-model="search">
 			<ul>
                 <li ng-cloak ng-repeat="missione in missioni | filter:{'nome': search} | orderBy:'lancio':false ">
@@ -76,7 +89,12 @@
                 </li>
             </ul>
 
+			<h3>JSON</h3>
             <pre>{{missioni | json : 6}}</pre>
+
+            <h3>Truncate</h3>
+            {{'Lorem ipsum dolor sit amet' | truncate:15}}
+
 		</div>
 
 
