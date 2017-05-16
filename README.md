@@ -146,6 +146,8 @@ Raffaele.
 					<br>
 					<li><b>esempio_04.html</b>: Filtri.</li>
 					<br>
+                                        <li><b>esempio_05.html</b>: Scoope e RootScoope.</li>
+					<br>    
 				</ul>
 			</li>
 		</ul>
