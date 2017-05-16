@@ -1,5 +1,12 @@
 angular.module('contactsMgr', [])
 
+.directive("titolo1", function() { 
+    return { 
+        restrict: "E", 
+        template: "<h1>Questo è un titolo</h1>" 
+    }; 
+  })
+
 .filter('truncate', function(){
     return function(input, limit){
         return (input.length > limit) ? input.substr(0, limit)+'…' : input;
