@@ -183,7 +183,16 @@ http://www.w3.org/TR/html4/frameset.dtd>
 					<li><strong>Bootstrap</strong> - Il framework.
 						<ul>
 							<br>
-							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/01 - Angular/esempio_01.html" target="_blank">esempio_01.html</a></b>: Introduzione.</li>
+							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/02 - Bootstrap/esempio_01.html" target="_blank">esempio_01.html</a></b>: Introduzione.</li>
+							<br>
+						</ul>
+					</li>
+
+					<br>
+					<li><strong>Ajax</strong> - Programmazione asincrona
+						<ul>
+							<br>
+							<li><b><a href="<?php echo $path_sviluppo?>APPENDICE/03 - Ajax/esempio_01.html" target="_blank">esempio_01.html</a></b>: Un semplice esmpio.</li>
 							<br>
 						</ul>
 					</li>
