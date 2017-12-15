@@ -33,7 +33,7 @@
 		<hr>
 	</header>
 
-	<body>
+	<body onload="Startup()">
 
 		<div id="demo">
 		<h1>XMLHttpRequest Object (GET/POST)</h1>
@@ -44,6 +44,17 @@
 		</div>
 
 		<script>
+		function Startup()
+		{
+			var timer=setInterval(callTimer,5000);
+		}
+
+		function callTimer(t)
+		{
+			var d=new Date();
+			console.log("callTimer: "+d.getTime());
+		}
+
 		function loadDoc(typeAjax,url) {
 
 			var xhttp;
@@ -72,19 +83,25 @@
 			}
 
 		  	xhttp.onreadystatechange = function() {
+		  	console.log("this.readyState="+this.readyState);
+  			console.log("this.status="+this.status);
+
 		    if (this.readyState == 4 && this.status == 200) {
 		      document.getElementById("demo").innerHTML = this.responseText;
 		      console.log(this.responseText);
+	          console.log(this.responseXML);
 		    }
 		  };
 
 		  params+="ajax=1&nome=ficcadenti";
 
-
+		  url+="?&"+escape(Math.random());
+		  console.log("URL: " + url);
 		  xhttp.open(typeAjax, url, true);
 		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		  xhttp.setRequestHeader("Content-length", params.length);
-		  xhttp.setRequestHeader("Connection", "close");
+		  //settati automaticamente dai browser
+		  //xhttp.setRequestHeader("Content-length", params.length);
+		  //xhttp.setRequestHeader("Connection", "close");
 		  xhttp.send(params);
 
 		}
