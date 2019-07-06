@@ -13,7 +13,15 @@ function paragrafo(str) /* utilizzo di variabili statiche */
 {
 	num_paragrafo++;
 	println("<h2 class=\"m30\">"+num_capitolo+"."+num_paragrafo+". "+str+"</h2>");
-	document.write("<div id=\""+str+"\" class=\"m70\">\n");
+
+	var divMain=document.getElementById('main');
+	if(divMain!=null)
+	{
+		divMain.innerHTML=divMain.innerHTML+"<div id=\""+str+"\" class=\"m70\">\n";
+	}else
+	{
+		document.write("<div id=\""+str+"\" class=\"m70\">\n");
+	}
 }
 
 function chiudiparagrafo()
@@ -28,23 +36,50 @@ function replaceAll(str, find, replace)
 
 function substrCount (str, subString) 
 {
-	document.write(subString+"<br>");	
-	document.write(str+"<br>");		
-	document.write(replaceAll(str,subString, "")+"<br>");		
-	document.write(str.length+"<br>");	
-	document.write((replaceAll(str,subString, "")).length+"<br>");	
-	document.write(subString.length+"<br>");		
+	var divMain=document.getElementById('main');
+	if(divMain!=null)
+	{
+		divMain.innerHTML=divMain.innerHTML+subString+"<br>";
+		divMain.innerHTML=divMain.innerHTML+str+"<br>";
+		divMain.innerHTML=divMain.innerHTML+replaceAll(str,subString, "")+"<br>";
+		divMain.innerHTML=divMain.innerHTML+str.length+"<br>";
+		divMain.innerHTML=divMain.innerHTML+(replaceAll(str,subString, "")).length+"<br>";
+		divMain.innerHTML=divMain.innerHTML+subString.length+"<br>";
+	}else
+	{
+		document.write(subString+"<br>");	
+		document.write(str+"<br>");		
+		document.write(replaceAll(str,subString, "")+"<br>");		
+		document.write(str.length+"<br>");	
+		document.write((replaceAll(str,subString, "")).length+"<br>");	
+		document.write(subString.length+"<br>");		
+	}
 	return (str.length - (replaceAll(str,subString, "")).length) / subString.length;
 }
 
 function println(str="")
 {
-	document.write(str+"<br>\n");
+	var divMain=document.getElementById('main');
+	if(divMain!=null)
+	{
+		divMain.innerHTML=divMain.innerHTML+str+"<br>\n";
+	}else
+	{
+		document.write(str+"<br>\n");
+	}
+	
 }
 
 function print(str="")
 {
-	document.write(str);
+	var divMain=document.getElementById('main');
+	if(divMain!=null)
+	{
+		divMain.innerHTML=divMain.innerHTML+str;
+	}else
+	{
+		document.write(str);
+	}
 }
 
 function infoBrowser()

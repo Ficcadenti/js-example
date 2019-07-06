@@ -17,90 +17,93 @@
 
 <hmtl>
 
-<head>
-	<title>sorgente: esempio_07.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
-</head>
+	<head>
+		<title>sorgente: esempio_07.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+	</head>
 
-<body>	
-	<p>
-		<i>
-			"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
-			nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
-			riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
-			domanda."<br>
-		</i>
-		<br>
-		<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
-	</p>
-	<hr>
+	<body>	
+		<p>
+			<i>
+				"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
+				nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
+				riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
+				domanda."<br>
+			</i>
+			<br>
+			<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
+		</p>
+		<hr>
 
-	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript" src="../assets/lib/journal.js"></script>
-	<script type="application/x-javascript">
-		infoBrowser();
-		capitolo("Strutture Dati");
+		<div id="main">
+		</div>
+		
+		<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
+		<script type="application/x-javascript" src="../assets/lib/journal.js"></script>
+		<script type="application/x-javascript">
+			infoBrowser();
+			capitolo("Strutture Dati");
 
-		paragrafo("Correlazione");
+			paragrafo("Correlazione");
 
-		function phi(tab)
-		{
-			return ((tab[3]*tab[0] - tab[2]*tab[1])/
-				Math.sqrt(	(tab[2]+tab[3])*
-							(tab[0]+tab[1])*
-							(tab[1]+tab[3])*
-							(tab[0]+tab[2])
-							));
-		}
-
-		function hasEvent(event,entry)		
-		{
-			return (entry.events.indexOf(event)!=-1);
-		}
-
-
-		function tableFor(event, journal) 
-		{
-			var table = [0, 0, 0, 0];
-			for (var i = 0; i < journal.length; i++) 
+			function phi(tab)
 			{
-				var entry = journal[i];
-				var index = 0;
-
-				if (hasEvent(event, entry)) 
-				{
-					index += 1;
-				}
-				if (entry.squirrel) 
-				{
-					index += 2;
-				}
-
-				table[index] += 1;
-
+				return ((tab[3]*tab[0] - tab[2]*tab[1])/
+					Math.sqrt(	(tab[2]+tab[3])*
+						(tab[0]+tab[1])*
+						(tab[1]+tab[3])*
+						(tab[0]+tab[2])
+						));
 			}
-			return table;
-		}
 
-		function storePhi(map,event,phi)
-		{
-			map[event]=phi;
-		}
-
-		function gatherCorrelations(journal) 
-		{
-			var phis = {};
-			journal.forEach( function(entry) 
+			function hasEvent(event,entry)		
 			{
-				entry.events.forEach( function(elementoCorrente) 
+				return (entry.events.indexOf(event)!=-1);
+			}
+
+
+			function tableFor(event, journal) 
+			{
+				var table = [0, 0, 0, 0];
+				for (var i = 0; i < journal.length; i++) 
 				{
-					if (!(elementoCorrente in phis))
+					var entry = journal[i];
+					var index = 0;
+
+					if (hasEvent(event, entry)) 
 					{
-						phis[elementoCorrente] = phi(tableFor(elementoCorrente, journal));
+						index += 1;
 					}
+					if (entry.squirrel) 
+					{
+						index += 2;
+					}
+
+					table[index] += 1;
+
+				}
+				return table;
+			}
+
+			function storePhi(map,event,phi)
+			{
+				map[event]=phi;
+			}
+
+			function gatherCorrelations(journal) 
+			{
+				var phis = {};
+				journal.forEach( function(entry) 
+				{
+					entry.events.forEach( function(elementoCorrente) 
+					{
+						if (!(elementoCorrente in phis))
+						{
+							phis[elementoCorrente] = phi(tableFor(elementoCorrente, journal));
+						}
+					});
 				});
-			});
 			/*for (var entry = 0; entry < journal.length; entry++) 
 			{
 				var events = journal[entry].events;

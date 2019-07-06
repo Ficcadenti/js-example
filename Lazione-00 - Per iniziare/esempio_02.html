@@ -16,58 +16,63 @@
 -->
 
 <hmtl>
-<head>
-	<title>sorgente: esempio_02.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
-</head>
-<body>
-	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript">
-		
-		capitolo("Stringhe");
+	<head>
+		<title>sorgente: esempio_02.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+	</head>
+	<body>
+		<div id="main">
+		</div>
 
-		var str = new String("Raffaele");
-		var t1 = new String ("TeStO");
-		var t2 = t1.toLowerCase() //restituisce "testo"
-		var t3 = t1.toUpperCase() //Restituisce "TESTO"
+		<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
+		<script type="application/x-javascript">
 
-		println("La stringa \xE9 lunga "+str.length+" caratteri!");
-		println("Raffaele Ficcadenti".length+" caratteri!<br>");
+			capitolo("Stringhe");
 
-		
-		println(t1);
-		println(t2);
-		println(t3);
+			var str = new String("Raffaele");
+			var t1 = new String ("TeStO");
+			var t2 = t1.toLowerCase() //restituisce "testo"
+			var t3 = t1.toUpperCase() //Restituisce "TESTO"
 
-		var ultimoCarattere = str.charAt(str.length - 1);
-		var ultimoCarattereAscii = str.charCodeAt(str.length - 1);
-		println(ultimoCarattere);	
-		println(ultimoCarattereAscii);	
+			println("La stringa \xE9 lunga "+str.length+" caratteri!");
+			println("Raffaele Ficcadenti".length+" caratteri!<br>");
 
-		var stringa;
-		for (codice = "0".charCodeAt(0); codice <= "9".charCodeAt(0); codice ++ ) 
-		{
-			stringa = stringa + String.fromCharCode(codice);
-		}
-		println(stringa);	
+			
+			println(t1);
+			println(t2);
+			println(t3);
 
-		
-		var str1="Ciao Ciao Ciao Raffaele";
-		var occ=substrCount(str1,"Ciao");
-		println(occ);			
+			var ultimoCarattere = str.charAt(str.length - 1);
+			var ultimoCarattereAscii = str.charCodeAt(str.length - 1);
+			println(ultimoCarattere);	
+			println(ultimoCarattereAscii);	
 
-		println(str1.split(" "));		
-		println("PHI Greco="+Math.PI);	
+			var stringa;
+			for (codice = "0".charCodeAt(0); codice <= "9".charCodeAt(0); codice ++ ) 
+			{
+				stringa = stringa + String.fromCharCode(codice);
+			}
+			println(stringa);	
+
+			
+			var str1="Ciao Ciao Ciao Raffaele";
+			var occ=substrCount(str1,"Ciao");
+			println(occ);			
+
+			println(str1.split(" "));		
+			println("PHI Greco="+Math.PI);	
 
 
-	</script>
+		</script>
 
-	<hr>
-	<div id="info">
-		<h1>Info</h1>
-		<a href="http://www.w3schools.com/js/default.asp" target="_blank">w3schools<span class="dotcom">.com</span></a>
-	</div>
 
-</body>
+
+		<hr>
+		<div id="info">
+			<h1>Info</h1>
+			<a href="http://www.w3schools.com/js/default.asp" target="_blank">w3schools<span class="dotcom">.com</span></a>
+		</div>
+
+	</body>
 </hmtl>

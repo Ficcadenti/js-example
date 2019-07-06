@@ -17,41 +17,44 @@
 
 <hmtl>
 
-<head>
-	<title>sorgente: esempio_06.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
-</head>
+	<head>
+		<title>sorgente: esempio_06.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+	</head>
 
-<body>	
-	<p>
-		<i>
-			"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
-			nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
-			riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
-			domanda."<br>
-		</i>
-		<br>
-		<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
-	</p>
-	<hr>
+	<body>	
+		<p>
+			<i>
+				"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
+				nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
+				riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
+				domanda."<br>
+			</i>
+			<br>
+			<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
+		</p>
+		<hr>
 
-	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript">
-		infoBrowser();
-		capitolo("Strutture Dati");
-
-		paragrafo("Oggetti");
-
-		var lista=[2,3,4,5,6];
-		lista.x=10;
-		println("Elementi in lista => "+lista.length);
-		println("lista => "+lista);
-		println("lista[1] => "+lista[1]);
-		println("lista["+(1-1)+"] => "+lista[1-1]);
-
+		<div id="main">
+		</div>
 		
-		println("Accesso alle propriet\xE0 di un oggetto: ")
+		<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
+		<script type="application/x-javascript">
+			infoBrowser();
+			capitolo("Strutture Dati");
+
+			paragrafo("Oggetti");
+
+			var lista=[2,3,4,5,6];
+			lista.x=10;
+			println("Elementi in lista => "+lista.length);
+			println("lista => "+lista);
+			println("lista[1] => "+lista[1]);
+			println("lista["+(1-1)+"] => "+lista[1-1]);
+
+			
+			println("Accesso alle propriet\xE0 di un oggetto: ")
 		println(lista["x"]); // o in alternativa
 		println(lista.x);
 
@@ -116,24 +119,24 @@
 		println();
 
 		var elenco=[
-			{
-				nome:"Raffaele",
-				cognome:"Ficcadenti",
-				email:["raffaele.ficcadenti@gmail.com","raffaele.ficcadenti@e-tech.net"],
-				abilitato:true
-			},
-			{
-				nome:"Valeria",
-				cognome:"Greco",
-				email:["valeria5.greco@gmail.com"],
-				abilitato:true
-			},
-			{
-				nome:"Francesco",
-				cognome:"Greco",
-				email:["francesco.greco@gmail.com"],
-				abilitato:false
-			}
+		{
+			nome:"Raffaele",
+			cognome:"Ficcadenti",
+			email:["raffaele.ficcadenti@gmail.com","raffaele.ficcadenti@e-tech.net"],
+			abilitato:true
+		},
+		{
+			nome:"Valeria",
+			cognome:"Greco",
+			email:["valeria5.greco@gmail.com"],
+			abilitato:true
+		},
+		{
+			nome:"Francesco",
+			cognome:"Greco",
+			email:["francesco.greco@gmail.com"],
+			abilitato:false
+		}
 		];
 
 		for(var i=0;i<elenco.length;i++)
@@ -164,13 +167,13 @@
 		println("p3="+p3);
 
 		var persona1 = {
-		    nome: "Mario",
-		    cognome: "Rossi"
+			nome: "Mario",
+			cognome: "Rossi"
 		};
 
 		var persona2 = new Object({
-		    nome: "Mario",
-		    cognome: "Rossi"
+			nome: "Mario",
+			cognome: "Rossi"
 		});
 		console.log(persona1);
 		console.log(persona2);

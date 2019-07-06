@@ -17,36 +17,39 @@
 
 <hmtl>
 
-<head>
-	<title>sorgente: esempio_12.html</title>
-	<!-- Sezione per i CSS -->
-	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
-</head>
+	<head>
+		<title>sorgente: esempio_12.html</title>
+		<!-- Sezione per i CSS -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+	</head>
 
-<body>	
-	<p>
-		<i>
-			"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
-			nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
-			riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
-			domanda."<br>
-		</i>
-		<br>
-		<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
-	</p>
-	<hr>
+	<body>	
+		<p>
+			<i>
+				"In due occasioni mi hanno chiesto, 'Dica, signor Babbage, se inserisce <br>
+				nella macchina le cifre sbagliate, ne usciranno risposte giuste?' [...] Non <br>
+				riesco a capacitarmi della confusione di idee che potrebbe provocare tale <br>
+				domanda."<br>
+			</i>
+			<br>
+			<strong>Charles Babbage</strong><i> Passages from the Life of a Philosopher (1864)</i>
+		</p>
+		<hr>
 
-	<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
-	<script type="application/x-javascript" src="../assets/lib/alberobinario.min.js"></script>
-	<script type="application/x-javascript" src="../assets/lib/alberobinario_slim.min.js"></script>
+		<div id="main">
+		</div>
+		
+		<script type="application/x-javascript" src="../assets/lib/my_scripts.js"></script>
+		<script type="application/x-javascript" src="../assets/lib/alberobinario.min.js"></script>
+		<script type="application/x-javascript" src="../assets/lib/alberobinario_slim.min.js"></script>
 
-	<script type="application/x-javascript">
-		infoBrowser();
-		capitolo("Strutture Dati");
-		paragrafo("Esercizio 1: albero binario");
+		<script type="application/x-javascript">
+			infoBrowser();
+			capitolo("Strutture Dati");
+			paragrafo("Esercizio 1: albero binario");
 
-		var val=6;
-		var valori=[6,2,8,1,4,12,3,9,15];
+			var val=6;
+			var valori=[6,2,8,1,4,12,3,9,15];
 		//var valori=[1,3,2];
 
 		var tree=null;
@@ -69,7 +72,7 @@
 			println(rnd);
 			tree.aggiungi(rnd);
 		}*/
-	
+		
 		println("Visita Preordine = "+tree.visitaPreordine());
 		println("Visita Postordine = "+tree.visitaPostordine());
 		println("Visita Simmetrica (ordinato) = "+tree.visitaSimmetrica());
@@ -82,7 +85,7 @@
 		println("Max nodo = "+tree.maxNodo().valore);
 		println("Cerca("+val+") = "+tree.cerca(val));
 
-	
+		
 		var nodo=tree.get(val);
 		if(nodo!=null)
 		{

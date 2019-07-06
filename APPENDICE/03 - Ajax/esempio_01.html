@@ -36,36 +36,36 @@
 	<body onload="Startup()">
 
 		<div id="demo">
-		<h1>XMLHttpRequest Object (GET/POST)</h1>
+			<h1>XMLHttpRequest Object (GET/POST)</h1>
 
-			<button type="button" onclick="loadDoc('GET','http://localhost:8080/RESTFull_serv_01/api/test_get/Raffaele/Ficcadenti')">Chiamata GET</button>
+			<button type="button" onclick="loadDoc('GET','http://localhost:9080/FormRegistratiWEB/rest/RegistratiService/test')">Chiamata GET</button>
 			<br><br><br>
 			<button type="button" onclick="loadDoc('POST','http://localhost:8080/RESTFull_serv_01/api/test_post/')">Chiamata POST</button>
 		</div>
 
 		<script>
-		function Startup()
-		{
-			var timer=setInterval(callTimer,5000);
-		}
+			function Startup()
+			{
+				var timer=setInterval(callTimer,5000);
+			}
 
-		function callTimer(t)
-		{
-			var d=new Date();
-			console.log("callTimer: "+d.getTime());
-		}
+			function callTimer(t)
+			{
+				var d=new Date();
+				console.log("callTimer: "+d.getTime());
+			}
 
-		function loadDoc(typeAjax,url) {
+			function loadDoc(typeAjax,url) {
 
-			var xhttp;
-			var browserName = "User-agent header sent: " + navigator.userAgent;
-			var XHRtype = typeof(XMLHttpRequest);
-			var x = window.ActiveXObject;
-			var params = "";
+				var xhttp;
+				var browserName = "User-agent header sent: " + navigator.userAgent;
+				var XHRtype = typeof(XMLHttpRequest);
+				var x = window.ActiveXObject;
+				var params = "";
 
-			console.log(browserName);
-			console.log(XHRtype);
-			console.log(x);
+				console.log(browserName);
+				console.log(XHRtype);
+				console.log(x);
 
 			// istanzio l'oggetto XHR
 			if(XHRtype=='function' || XHRtype=='object')
@@ -82,30 +82,42 @@
 				}
 			}
 
-		  	xhttp.onreadystatechange = function() {
-		  	console.log("this.readyState="+this.readyState);
-  			console.log("this.status="+this.status);
+			xhttp.onreadystatechange = function() {
+				console.log("this.readyState="+this.readyState);
+				console.log("this.status="+this.status);
 
-		    if (this.readyState == 4 && this.status == 200) {
-		      document.getElementById("demo").innerHTML = this.responseText;
-		      console.log(this.responseText);
-	          console.log(this.responseXML);
-		    }
-		  };
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML = this.responseText;
+					console.log(this.responseText);
+					console.log(this.responseXML);
+				}
+			};
 
-		  params+="ajax=1&nome=ficcadenti";
+			params+="ajax=1&nome=ficcadenti";
 
-		  url+="?&"+escape(Math.random());
-		  console.log("URL: " + url);
-		  xhttp.open(typeAjax, url, true);
-		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			url+="?random="+escape(Math.random());
+			console.log("URL: " + url);
+			xhttp.open(typeAjax, url, true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			
 		  //settati automaticamente dai browser
 		  //xhttp.setRequestHeader("Content-length", params.length);
 		  //xhttp.setRequestHeader("Connection", "close");
 		  xhttp.send(params);
 
 		}
-		</script>
 
-	</body>
+		function loadDoc1(typeAjax,url) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open(typeAjax, url, true);
+			xhttp.send();
+		}
+	</script>
+
+</body>
 </html>
