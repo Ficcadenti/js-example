@@ -171,9 +171,11 @@
 				return cerca(1,"1");
 			}
 
-			var espandi=34;
-			println("esplodi "+espandi+": "+cercaSoluzione(espandi));
-
+			var espandi=14;
+			for(i=0;i<30;i++)
+			{
+				println("esplodi "+i+": "+cercaSoluzione(i));
+			}
 			function zeroPad(number,width)
 			{
 				var str=String(number);
@@ -212,7 +214,7 @@
 			println("Il minimo tra "+a+" e "+b+" \xE9 " + minimo(a,b));
 			chiudiparagrafo();
 
-			paragrafo("Ricorsività");	
+			paragrafo("Ricorsivit&agrave;");	
 
 			function isEven(number)
 			{
@@ -282,9 +284,9 @@
 
 			var str="BiBBia";
 
-			println(countB(str));
-			println(countBnew(str));
-			println(countChar(str,"i"));
+			println("countB    : "+countB(str));
+			println("countBnew : "+countBnew(str));
+			println("countChar : "+countChar(str,"i"));
 
 			chiudiparagrafo();	
 		</script>
