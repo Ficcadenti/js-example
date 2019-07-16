@@ -16,7 +16,7 @@ function paragrafo(str) /* utilizzo di variabili statiche */ {
 	if (divMain != null) {
 		divMain.innerHTML = divMain.innerHTML + "<div id=\"" + str + "\" class=\"m70\">\n";
 	} else {
-			document.write("<div id=\"" + str + "\" class=\"m70\">\n");
+		document.write("<div id=\"" + str + "\" class=\"m70\">\n");
 	}
 }
 
@@ -48,6 +48,7 @@ function substrCount(str, subString) {
 }
 
 function println(str = "") {
+	str=str.toString().replace(/ /g, '&nbsp;');
 	if (divMain != null) {
 		divMain.innerHTML = divMain.innerHTML + str + "<br>\n";
 	} else {
@@ -57,6 +58,7 @@ function println(str = "") {
 }
 
 function print(str = "") {
+	str=str.toString().replace(/ /g, '\u00a0');
 	if (divMain != null) {
 		divMain.innerHTML = divMain.innerHTML + str;
 	} else {
